@@ -1,0 +1,123 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.box{
+    top: 10px;
+    position: relative;
+    border: 3px solid #ccc;
+    margin: 0 auto;
+    width: 900px;
+    height: 1200px;
+    box-shadow: 0 0 5px #000;
+    
+}
+.box .hengtiao{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(51, 107, 238);
+    position: relative;
+}
+.box .hengtiao::before{
+    /* 使用伪元素添加白条 */
+    content: "";
+    width: 100%;
+    height: 5px;
+    background-color: #fff;
+    top: 8px;
+    position: absolute;
+}
+.box img{
+    position: absolute;
+    top: 38px;
+    left: 40px;
+    width: 131px;
+    height: 170px;
+    border: 5px solid #ccc;
+}
+
+.box .text .biaoti{
+    position: absolute;
+    color: rgb(51, 107, 238);
+    font-size: 50px;
+    font-weight: 900;
+    top: 56px;
+    left: 350px;
+}
+.box .text .xiaobiaoti{
+    position: absolute;
+    color: #000;
+    font-size: 17px;
+    top: 90px;
+    left: 680px;
+}
+.box .xbox{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    
+    font-size: 15px;
+    top: 115px;
+    left: 183px;
+    word-break:keep-all;
+    white-space:nowrap;
+}
+.xbox .xxbox{
+    background-color: rgb(236, 236, 236);
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgb(55, 54, 54);
+    margin: 12px;
+}
+.xxbox span{
+    display: flex;
+    justify-content: left;
+    position: relative;
+    margin: 14px;
+}
+.box .dabiaoti{
+    color: rgb(51, 107, 238);
+    display: flex;
+    justify-content: left;
+    position: relative;
+    top: 185px;
+    left: 40px;
+    padding: 10px;
+}
+.box .dabiaoti .English{
+    font-size: 14px;
+    padding-left: 10px;
+}
+.box .jiaoyu{
+    position: relative;
+    width: 92%;
+    top: 190px;
+    margin: 0 auto;
+    background-color: rgb(236, 236, 236);
+    box-shadow: 0 0 3px rgb(57, 56, 56);
+    border-radius: 3px;
+    padding: 10px;
+}
+.box .xxbiaoti{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.box .bjtext span{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 10px;
+}
+.box span h5{
+    font-size: 17px;
+    white-space: nowrap;
+}
+.box .xiahengtiao{
+    background-color: rgb(51, 107, 238);
+    width: 100%;
+    height: 40px;
+    position: relative;
+    top: 230px;
+}
