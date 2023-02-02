@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+        }
+        h1{
+            color: #fff;
+        }
+        #jdt{
+            width: 250px;
+            height: 35px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #ccc;
+            margin: 20px;
+        }   
+        #tiao{
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to right bottom ,#6fff00,#00eaff, #2c8f13);
+            border-radius: 10px;
+            box-shadow: 0 0 5px #ccc;
+            animation: dong 4s infinite;
+        }
+        @keyframes dong{
+            0%{
+                width: 0;
+                
+            }
+            100%{
+                width: 100%;
+            }
+        }
+        #inp{
+            width: 80px;
+            height: 60px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+
+        }
+        input{
+            width: 100%;
+            height: 100%;
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: azure;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>加载动画</h1>
+    <div id="jdt">
+        <div id="tiao"></div>
+    </div>
+    <div id="nav">
+        <input type="text" value="0" id="inp">
+    </div>
+<script>
+    let ojdt = document.querySelector('#jdt');
+    let otiao = document.querySelector('#tiao');
+    var oInp = document.querySelector('#inp');
+    setInterval(() => {      //计时函数 
+        let num = `${parseInt(otiao.clientWidth / ojdt.clientWidth*100)}%`;
+        oInp.value = num;  //把获取到的值赋予到input里的value里去
+    },);
+
+</script>
+</body>
+</html>

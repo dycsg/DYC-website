@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Microsoft-Yahei', sans-serif;
+}
+body{
+    height: 100vh;
+    background-image: linear-gradient(to right bottom ,#ff8400 ,#4480ff ,#579900);
+}
+.box{
+    position: absolute;
+    top: 48%;
+    left: 45%;
+}
+
+label{
+    position: relative;
+    width: 200px;
+    height: 60px;
+    background: linear-gradient(to right bottom ,#34ff4b ,#44ffa5 ,#8edf26);
+    border: 2px solid #000;
+    background-color: #fff;
+    border-radius: 35px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    display: block;
+    font-size: 22px;
+    font-weight: 20px;
+    box-shadow: 0 0 25px #000;
+    transition: all 0.3s ease;
+    /* 文字不选中 */
+    user-select: none;
+    -webkit-user-select: none;
+}
+label:hover{
+    letter-spacing: 3px;
+}    
+label::before{
+    content: "取消";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right bottom ,#34ff4b ,#44ffa5 ,#8edf26);
+    border-radius: 25px;
+    left: 0;
+    top: 0;
+    /* 文字不被选中 */
+    user-select: none;
+    -webkit-user-select: none;
+    opacity: 0;
+    /* 透明的0 */
+}
+#check{
+    display: none;
+}
+#check:checked ~ label::before{
+    opacity: 1;
+}
+#check:checked ~ .href-icon{
+    opacity: 1;
+    pointer-events: auto;
+    top: -95px;
+   
+}
+.href-icon{
+    position: absolute;
+    opacity: 0;
+    transform: translateX(50px);
+    top: 55%;
+    left: -90px;
+    width: 145%;
+    height: 130%;
+    text-align: center;
+    border-radius: 25px;
+    background-color: #fff;
+    line-height: 90px;
+    transition: all 0.3s ease;
+}
+/* 制作小三角（用一个正方形旋转45度得来） */
+.href-icon::before{
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    left: 46%;
+    top: 75px;
+    z-index: -1;
+    transform: translateY(-9px) rotate(-44deg);
+}
+/* 修改a链接样式 */
+.href-icon span{
+    padding-left: 20px;
+    size: 30px;
+    transition: all 0.3s ease;
+}
+.href-icon a:nth-child(1){
+    color: blue;
+}
+.href-icon a:nth-child(1){
+    color: hotpink;
+}
+.href-icon a:nth-child(1){
+    color: lawngreen;
+}
+.href-icon a:nth-child(1){
+    color: #000;
+}
+
+

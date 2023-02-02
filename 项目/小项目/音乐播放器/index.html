@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        body{
+            background-image: linear-gradient(to right bottom ,#ff0000,#fff200, #1e9600);
+        }
+        .box{
+            width: 480px;
+            height: 600px;
+            background-color: aqua;
+            border-radius: 20px 20px 20px 20px;
+            margin: 50px auto;
+        }
+        .top{
+            width: 480px;
+            height: 70px;
+            background-color: rgb(20, 150, 220);
+            border-radius: 20px 20px 0px 0px;
+        }
+        h3{
+            color: rgb(38, 255, 0);
+            margin: 10px auto;
+            text-align: center;
+        }
+        h4{
+            margin: 10px auto;
+            text-align: center;
+        }
+        .yx{
+            width: 270px;
+            height: 270px;
+            background-color: chartreuse;
+            margin: 30px auto;
+            background-image: url(./img/屏幕截图\ 2022-05-18\ 192611.png);
+            background-size: contain;
+            border-radius: 180px;
+            animation: xztp 6s linear infinite;
+        }
+        @keyframes xztp{
+            0%{
+                transform: rotateZ(0deg);
+            }
+            100%{
+                transform: rotateZ(360deg);
+            }
+        }
+        .gc{
+            width: 250px;
+            height: 55px;
+            background-color: aqua;
+            margin: 0px auto;
+        }
+        p{
+            text-align: center;
+        }
+        .bottom{
+            width: 50px;
+            height: 50px;
+            background-color: chartreuse;
+            border-radius: 50%;
+            margin: 15px auto;
+            background-image: url(./img/gb.png);
+            background-size: contain;
+            background-position: -0.5px;
+        }
+        .bottom1{
+            width: 50px;
+            height: 50px;
+            background-color: chartreuse;
+            border-radius: 50%;
+            margin: 15px auto;
+            background-image: url(./img/ks1.png);
+            background-size: contain;
+            background-position: -0.5px;
+        }
+        .qys{
+            width: 50px;
+            height: 50px;
+            background-color: chartreuse;
+            margin: 0px auto;
+            background-image: url(./img/hys.png);
+            border-radius: 50%;
+            background-size: contain;
+            transform: translateX(80px)translateY(-219px);
+            
+        }
+        .hys{
+            width: 50px;
+            height: 50px;
+            background-color: chartreuse;
+            margin: 0px auto;
+            border-radius: 50%;
+            background-image: url(./img/qys.png);
+            background-size: contain;
+            transform: translateX(-82px) translateY(-267px);
+            background-position: -0.5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="top">
+            <h3>小氧音乐</h3>
+            <h4>邓紫棋-再见</h4>
+        </div>
+        <div class="yx"></div>
+        <div class="gc">
+            <p>我们的照片记入幸福到永远</p>
+        </div>
+        <div class="bf-bj">
+            <div class="bottom" id="btn"></div>
+            <!-- 定义id -->
+            <video src="./video/G.E.M. 邓紫棋 - 再见.mp3" id="video"></video>
+            <!-- 定义id -->
+            <div class="qys"></div>
+            <div class="hys"></div>
+        </div>
+    </div>
+    <script>
+        var btn = document.getElementById("btn")
+        // id选择器
+        var video = document.getElementById("video")
+        // id选择器
+
+        var flag = true
+        btn.onclick = function(){
+            if(flag==true){
+                btn.className = 'bottom1'
+                video.play()
+                flag = false
+            }else if(flag ==false){
+                btn.className = 'bottom'
+                video.pause()
+                flag =true
+            }
+        }
+    </script>
+</body>
+</html>
