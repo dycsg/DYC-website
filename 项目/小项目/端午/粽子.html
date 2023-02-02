@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            /* 背景图片 */
+            /* background-image: url("duanwu.png"); */
+            background-image: linear-gradient(to right bottom ,rgb(59, 203, 69) ,rgb(203, 57, 191) ,#422beb);
+            /* 渐变背景 */
+            height: 100vh;
+            animation: back1 5s ease infinite;
+            /* 定义动画 名称 时间   无限循环 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+        @keyframes back1{
+            0%{
+                background-image: linear-gradient(to right bottom ,rgb(59, 203, 69) ,rgb(203, 57, 191) ,#422beb);
+            }
+            50%{
+                background-image: linear-gradient(to right bottom ,rgb(164, 224, 44) ,rgb(222, 40, 128) ,#177acb);
+            }
+            100%{
+                background-image: linear-gradient(to right bottom ,rgb(103, 216, 111) ,rgb(215, 86, 204) ,#8e2cff);
+            }
+        }
+        .word{
+            color: azure;
+            font-size: 24px;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: beige;
+            border-radius: 57% 47% 51% 49% / 86% 85% 15% 14%;
+            border: 3px solid #000000;
+            overflow: hidden;
+            position: relative;
+        }
+        .box::before{
+            content: '';
+            width: 140px;
+            height: 272px;
+            background-color: darkseagreen;
+            border-radius: 23%;
+            border: 3px solid #000000;
+            position: absolute;
+            left: 60px;
+            top: 110px;
+            transform: rotate(41deg);
+            
+        }
+        .box::after{
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-color: rgb(210, 225, 210);
+            position: absolute;
+            border-radius: 50%;
+            top: 130px;
+            left: 165px;
+        }
+        .box-r{
+            /* 叶子 */
+        width: 210px;
+        height: 105px;
+        background-color: darkseagreen;
+        border: 3px solid #000000;
+        border-radius: 45px;
+        position: absolute;
+        transform: rotate(23deg);
+        top: 131px;
+        right: 14px;
+        left: -21px;
+        }
+        .box-r::before{
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-color: rgb(210, 225, 210);
+            position: absolute;
+            border-radius: 50%;
+            top: 16px;
+            left: 20px;
+        }
+        .box-r::after{
+            content: '';
+            width: 100px;
+            height: 40px;
+            background-color: rgb(94, 139, 94);
+            position: absolute;
+            border-radius: 20px;
+            top: 67px;
+            left: -48px;
+        }
+        .yj{
+            /* 眼睛 */
+            width: 25px;
+            height: 25px;
+            background-color: #000000;
+            position: absolute;
+            border-radius: 50%;
+            transform: translateX(52px) translateY(35px);
+        }
+        .yj::before{
+            /* 眼珠子 */
+            content: '';
+            width: 10px;
+            height: 10px;
+            background-color: aliceblue;
+            border-radius: 50%;
+            position: absolute;
+            transform: translateX(3px) translateY(2px);
+        }
+        .yj::after{
+            /* 眼白 */
+            content: '';
+            width: 25px;
+            height: 25px;
+            background-color: beige;
+            position: absolute;
+            border-radius: 50%;
+            transform: translateX(1px) translateY(15px);
+        }
+        .yj-r{
+            /* 眼睛 */
+            width: 25px;
+            height: 25px;
+            background-color: #000000;
+            position: absolute;
+            border-radius: 50%;
+            transform: translateX(127px) translateY(35px);
+        }
+        .yj-r::before{
+            /* 眼珠子 */
+            content: '';
+            width: 10px;
+            height: 10px;
+            background-color: aliceblue;
+            border-radius: 50%;
+            position: absolute;
+            transform: translateX(11px) translateY(2px);
+        }
+        .yj-r::after{
+            /* 眼白 */
+            content: '';
+            width: 25px;
+            height: 25px;
+            background-color: beige;
+            border-radius: 50%;
+            position: absolute;
+            transform: translateX(1px) translateY(14px);
+        }
+        .sh{
+            width: 30px;
+            height: 24px;
+            background-color: hotpink;
+            position: absolute;
+            border-radius: 60px;
+            transform: translateX(22px) translateY(70px);
+        }
+        .sh::before{
+            content: '';
+            width: 30px;
+            height: 24px;
+            background-color: hotpink;
+            position: absolute;
+            border-radius: 60px;
+            transform: translateX(129px) translateY(-2px);
+        }
+        .zb{
+            /* 嘴巴 */
+            width: 30px;
+            height: 24px;
+            background-color: rgb(0, 0, 0);
+            position: absolute;
+            border-radius: 60px;
+            transform: translateX(89px) translateY(83px);
+        }
+        .zb::before{
+            /* 嘴唇 */
+            content: '';
+            width: 30px;
+            height: 24px;
+            background-color: beige;
+            position: absolute;
+            border-radius: 60px;
+            transform: translateX(0px) translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- css运用了许多伪元素::before ::after -->
+    <div class="word">端午安康</div>
+    <!-- 文字 -->
+    <div class="box">
+        <!-- 身体 -->
+        <div class="box-r"></div>
+        <!-- 左叶子 -->
+        <div class="yj"></div>
+        <div class="yj-r"></div>
+        <!-- 左右眼睛 -->
+        <div class="sh"></div>
+        <!-- 腮红 -->
+        <div class="zb"></div>
+        <!-- 嘴巴 -->
+    </div>
+</body>
+</html>

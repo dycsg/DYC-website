@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="gongyong-img/logo.ico">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/">
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <style>
+       /* CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+  font-family: "iconfont"; /* Project id 3429987 */
+  src: url('//at.alicdn.com/t/c/font_3429987_3ofot782tgx.woff2?t=1674897481944') format('woff2'),
+       url('//at.alicdn.com/t/c/font_3429987_3ofot782tgx.woff?t=1674897481944') format('woff'),
+       url('//at.alicdn.com/t/c/font_3429987_3ofot782tgx.ttf?t=1674897481944') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+    </style>
+    <title>登入</title>
+</head>
+
+<body>
+
+    <div class="box">
+        <!-- logo图片 -->
+        <img src="gongyong-img/logo-removebg-preview.png" alt="">
+        <!-- 账号 -->
+        <p class="zhanghao">
+            <label for="username">账号</label>
+            <input type="text" placeholder="请输入用户名" id="username" autocomplete="on" name="zhidong">
+            <!-- <span class="tips">正</span> -->
+        </p>
+        <!-- 密码 -->
+        <p class="mima">
+            <label for="psaaword">密码</label>
+            <input type="password" placeholder="请输入密码" id="password" autocomplete="on" name="zhidong">
+            <!-- <span class="tips">确</span> -->
+            <i id="mimabtn">
+                <img src="/gongyong-img/biyan.jpg" id="mimaimg" alt="" style="width: 20px; height: 20px;">
+            </i>
+        </p>
+        <!-- 按钮 -->
+        <div>
+            <button class="loginbtn">登入</button></a>
+            <button class="register" onclick="myFunction()">注册</button>
+        </div>
+    </div>
+    <script>
+        function myFunction() {
+            alert("请先勾选注意事项\n需要网络")
+        }
+
+        var password = document.getElementById("password")
+        var mimabtn = document.getElementById("mimabtn")
+        var mimaimg = document.getElementById("mimaimg")
+        var flag = 0
+        mimabtn.onclick = function(){
+            if (flag == 0){
+                password.type = "text"
+                mimaimg.src = "/gongyong-img/zhengyan.jpg"
+                flag = 1
+            } else {
+                password.type = "password"
+                mimaimg.src = "/gongyong-img/biyan.jpg"
+                flag = 0
+            }
+        }
+        
+        // jQuery
+        $(function () {
+            $(".loginbtn").on("click", function () {
+                if ($("#username").val() == "123" || $("#password").val() == "123") {
+                    window.location.href = "zuowei.html"
+                } else {
+                    alert("请输入正确账号密码")
+                }
+
+            })
+            
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>已点</title>
+    <link rel="icon" href="gongyong-img/logo.ico">
+    <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet" href="css/diancanlan.css">
+    <link rel="stylesheet" href="css/yidian.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/yidian.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="subbar">
+            <a href="diancanlan.html">
+                <img src="gongyong-img/logo-removebg-preview.png" alt="点餐">
+            </a>
+            <!-- 主信息栏 -->
+            <div class="xingxi">
+                <p>清扬餐厅：欢迎您</p>
+                <p>空闲桌位: 5桌</p>
+                <p>正在点餐: 1桌</p>
+                <p>正在用餐: 2桌</p>
+                <p class="iconfont"><a href="kefu.html">在线客服</a>&#xe60a;</p>
+            </div>
+            <!-- 主工具栏 -->
+            <ul class="action">
+                <a href="yidian.html">
+                    <li class="ac" onclick="yixiadian"><i>1</i><span class="iconfont">&#xe601;</span>已点</li>
+                </a>
+                <a href="zuowei.html">
+                    <li><span class="iconfont">&#xe62e;</span>座位</li>
+                </a>
+                <a href="hotai-login.html">
+                    <li><span class="iconfont">&#xe65c;</span>后台</li>
+                </a>
+                <a href="index.html">
+                    <li><span class="iconfont">&#xe892;</span>退出</li>
+                </a>
+            </ul>
+        </div>
+        <!-- 菜单栏 -->
+        <div id="menubar">
+            <ul class="order">
+                <li class="active">
+                    <span class="iconfont">&#xe70e;</span>
+                    <span class="text">已点</span>
+                </li>
+                <li>
+                    <span class="iconfont">&#xe648;</span>
+                    <a href="yixiadan.html"><span class="text">已下单</span></a>
+                </li>
+            </ul>
+        </div>
+        <!-- 信息栏 -->
+        <div id="food">
+            <ul class="orderbox">
+                <li>
+                    <table>
+                        <tbody>
+                            <tr class="item">
+                                <td>1</td>
+                                <td><img src="caipin-img/爆炒龙虾.png" alt=""></td>
+                                <td>爆炒龙虾</td>
+                                <td>
+                                    <button class="decrement"><span class="iconfont">&#xe605;</span></button>
+                                    <input type="text" class="itxt" value="1">
+                                    <button class="increment"><span class="iconfont">&#xe604;</span></button>
+                                <td>
+                                <td  class="price">￥88.00</td>
+                                <td>变态辣</td>
+                                <td  class="pricesum">￥88</td>
+                                <td>
+                                    <button class="select">
+                                        <input type="checkbox" name="" id="" class="mincheck">
+                                    </button>
+                                </td>
+                                <td>
+                                    <div class="remove"><span class="iconfont">&#xe629;</span></div>
+                                </td>
+                            </tr>
+                            <tr class="item">
+                                <td>2</td>
+                                <td><img src="caipin-img/菌菇汤.png" alt=""></td>
+                                <td>菌菇汤</td>
+                                <td>
+                                    <button class="decrement"><span class="iconfont">&#xe605;</span></button>
+                                    <input type="text" class="itxt" value="1">
+                                    <button class="increment"><span class="iconfont">&#xe604;</span></button>
+                                <td>
+                                <td class="price">￥66.00</td>
+                                <td>少盐</td>
+                                <td class="pricesum">￥66</td>
+                                <td>
+                                    <button class="select">
+                                        <input type="checkbox" name="" id="" class="mincheck">
+                                    </button>
+                                </td>
+                                <td>
+                                    <div class="remove"><span class="iconfont">&#xe629;</span></div>
+                                </td>
+                            </tr>
+                            <tr class="item">
+                                <td>3</td>
+                                <td><img src="caipin-img/柠檬水.png" alt=""></td>
+                                <td>柠檬水</td>
+                                <td>
+                                    <button class="decrement"><span class="iconfont">&#xe605;</span></button>
+                                    <input type="text" class="itxt" value="1">
+                                    <button class="increment"><span class="iconfont">&#xe604;</span></button>
+                                <td>
+                                <td class="price">￥5.00</td>
+                                <td>常温</td>
+                                <td class="pricesum">￥5</td>
+                                <td>
+                                    <button class="select">
+                                        <input type="checkbox" name="" id="" class="mincheck">
+                                    </button>
+                                </td>
+                                <td>
+                                    <div class="remove"><span class="iconfont">&#xe629;</span></div>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    <!-- 点餐信息栏 -->
+                    <div class="foot">
+                        <!-- 左边 -->
+                        <div>
+                            全选 <input type="checkbox" name="" id="" class="maxcheck">
+                            <span>桌号：<strong>10</strong>号桌</span>
+                            <span>人数：<input type="text" class="footipt" value="1"></span>
+                            <span class="caisum">菜总计：<em class="">1</em></span>
+                            <button class="add" id="mybtn">添菜</button>
+                            <button class="empty" id="mybtn">清空</button>
+                        </div>
+                        <!-- 右边 -->
+                        <div>
+                            <span>总消费：￥<strong class="consume">154</strong></span>
+                            <button class="pay" id="mcbtn">下单</button>
+                            <!-- 弹窗 -->
+                            <div id="mymodal" class="modal">
+                                <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <p>你确定支付吗？</p>
+                                    <div class="tczf">
+                                        <button class="tczfbtn">支 付</button>
+                                        <button class="tcqxbtn">取消</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
