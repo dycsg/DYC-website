@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				text-align: center;
+				padding: 10px;
+			}
+
+			#time {
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>恭喜您,支付成功</h1>
+		<p>将在<span id="time">10</span>钟后自动返回首页</p>
+		<!-- 此处直接使用超链接来返回到上一个页面 -->
+		<h3>您可以直接单击此处返回<a href="支付10秒倒计时.html">首页</a></h3>
+		<script>
+			var returntime = document.getElementById('time');
+			var time=11;
+			// 由于页面开始会有一段缓冲时间，因此直接给time10略显瑕疵，给11留出缓冲时间，使得效果更加客观
+			// 设置一个time值用于计算html结构中的span值
+			// 设置一个定时器
+			setInterval(function(){
+				time--;
+				returntime.innerHTML=time;
+				// 使用innerhtml来修改上方html span中的值
+				if(time==0){
+					location.href='支付10秒倒计时.html';
+				}
+			},1000)
+		</script>
+	</body>
+</html>

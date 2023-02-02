@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			margin: 15%;
+			display: flex;
+			justify-content: center;
+			background: linear-gradient(to right, #aa00ff, #00ffff);
+		}
+
+		.cont {
+			display: flex;
+			text-align: center;
+			flex-direction: column;
+			border: 2px solid yellow;
+		}
+
+		.cont>p {
+			color: #ffffff;
+			font-size: 1.5em;
+			padding: 10px;
+		}
+
+		button {
+			width: 150px;
+			height: 30px;
+			color: #ffffff;
+			position: relative;
+			background: transparent;
+			/* 一定要去除button的自带背景色,否则无法完成渐变动画效果 */
+			border: 2px solid #d3d3d3;
+		}
+
+		button:hover {
+			color: #000000;
+			transform: scaleY(1.2);
+			animation: bg .7s linear infinite forwards;
+		}
+
+		button:active {
+			top: 2px;
+			left: 2px;
+			right: 2px;
+		}
+
+		@keyframes bg {
+			0% {
+				background: linear-gradient(to right, #00ffff, #ffff7f);
+			}
+
+			100% {
+				background: linear-gradient(to right, #ff5500, #00ff7f);
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="cont">
+		<p>商品:Web前端开发</p>
+		<p>价格:￥1998</p>
+		<p>现价:￥198</p>
+		<!-- 打出￥符号:将输入法转换为中文状态,单击键盘主键区上方小数字键盘4键即可 -->
+		<p>内容:HTML/CSS/JS</p>
+		<p>地址:山东省</p>
+		<div class="btn">
+			<button>支付</button>
+			<button>取消</button>
+		</div>
+	</div>
+	<script>
+		// 获取元素，使用数组下标的方式来控制具体元素
+		var payfor = document.querySelectorAll('button')[0];
+		var desc = document.querySelectorAll('button')[1];
+		// 分别为两个按钮注册鼠标单击事件
+		payfor.addEventListener('click', function () {
+			let payfortrue = window.confirm("您是否确认支付");
+			if (payfortrue) {
+				location.href = '/href/linshi.html';
+			}
+		})
+		// 取消按钮可以直接复制，结构与内容相差不大
+		desc.addEventListener('click', function () {
+			let desctrue = window.confirm("您是否确认取消本次支付");
+			if (desctrue) {
+				alert("取消支付成功");
+			}
+		})
+	</script>
+</body>
+
+</html>
