@@ -1,0 +1,75 @@
+.table{
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    bottom: 20px;
+    box-sizing: border-box;
+   
+    overflow: hidden;
+}
+.state{
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    /* 最右边对齐 */
+}
+.state li{
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+}
+.state li div{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    align-items: center;
+    line-height: 30px;
+}
+.state li div span{
+    font-size: 20px;
+    padding-left: 5px;
+}
+.state li span{
+    font-size: 16px;
+    padding-left: 5px;
+}
+.state li:nth-child(1) div, .seat div{
+    background: #2cd73b; 
+}
+.state li:nth-child(2) div, .seat .ordering div{
+    background: #d2d027; 
+}
+.state li:nth-child(3) div, .seat .eating div{
+    background: #cd3a2f; 
+}
+.seat{
+    width: 90%;
+    position: relative;
+    left: 210px;
+    top: 120px; 
+}
+
+.seat li{
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+    padding-left: 30px;
+    padding-bottom: 15px;
+}
+li .kh{
+    width: 30px;
+    height: 30px;
+}
+.seat div{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    line-height: 80px;
+    margin-bottom: 15px;
+}
+.seat div span{
+    font-size: 35px;
+}
+
+

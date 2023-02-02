@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'iconfont';  /* Project id 3429987 */
+    src: url('//at.alicdn.com/t/font_3429987_niq0ooajghg.woff2?t=1654492314941') format('woff2'),
+         url('//at.alicdn.com/t/font_3429987_niq0ooajghg.woff?t=1654492314941') format('woff'),
+         url('//at.alicdn.com/t/font_3429987_niq0ooajghg.ttf?t=1654492314941') format('truetype');
+  }
+  .iconfont{
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    /* 清除lu点 默认样式 */
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
+  }
+ .xingxi a{
+      text-decoration: none;
+      color: #00ff77;
+  }
+  body{
+    height: 100vh;
+    background-image: linear-gradient(to right bottom ,#47e791 ,rgba(160, 81, 100, 0.4) ,#f589);
+ 
+  }
+#subbar{
+    width: 200px;
+    height: 100vh;
+    border-right: 1px solid gainsboro;
+    position: fixed;
+}
+#subbar img{
+    width: 165px;
+    height: 165px;
+    display: block;
+    margin: 0px auto;
+}
+.xingxi{
+    width: 200px; 
+    box-sizing: border-box;
+    padding: 30px;
+    margin: 0 auto;
+    color: azure;
+    line-height: 30px;
+    position: relative;
+}
+.xingxi p:nth-child(5){
+    color: rgb(55, 255, 0);
+    font-size: 18px;
+    margin-left: 10px;
+}
+.xingxi p:nth-child(5) a:hover{
+    color: darkorange;
+}
+.xingxi p:nth-child(5):hover{
+    color: black;
+}
+.xingxi::before,.xingxi::after,.action::before,.action::after{
+    /* 用伪元素搞渐变线 4跟线 */
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    background: linear-gradient(90deg, transparent,#fff, transparent);
+}
+.xingxi::before{
+    /* 信息渐变线（上） */
+    top: 0;
+}
+.xingxi::after{
+    /* 信息渐变线（下） */
+    bottom: 0;
+}
+.action{
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.action a{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    /* 竖着排列 */
+    justify-content: center;
+    /* 水平 */
+    align-items: center;
+    /* 垂直居中 */
+    cursor: pointer;
+    /* 鼠标手 */
+    position: relative;
+    font-size: 25px;
+    color: #fff;
+}
+.action span{
+    font-size: 23px;
+    margin-bottom: 7px;
+}
+.action li.ac,.action li:hover{
+    /* 鼠标经过li效果 */
+    color: darkorange;
+}
+i{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: darkorange;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    /* 行高 */
+    line-height: 18px;
+    /* 删除倾斜 */
+    font-style: normal;
+
+    position: absolute;
+    left: 41px;
+    top: 31px;
+}  
+.action::before{
+    /* 菜单渐变线改变位置 */
+    top: 50%;
+}
+.action::after{
+    /* 菜单渐变线改变位置 */
+    top: 50%;
+    /* 旋转90度 */
+    transform: rotate(90deg);
+}
+

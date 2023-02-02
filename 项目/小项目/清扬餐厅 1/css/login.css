@@ -1,0 +1,111 @@
+* {
+    /* 清除默认样式 */
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    /* 清除按钮默认样式 */
+    border: 0;
+    outline: none;
+    background-color: transparent;
+}
+
+.box {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #0a0909 url("/gongyong-img/denglu.png") no-repeat center;
+    background-size: cover;
+    /* 背景覆盖 */
+}
+
+img {
+    width: 210px;
+    height: 200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    width: 60px;
+    height: 50px;
+    background-color: darkorange;
+    /* padding-right: 5px; */
+    border-radius: 35px 0px 0 35px;
+    text-align: center;
+    line-height: 40px;
+}
+
+p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+input {
+    width: 220px;
+
+    height: 50px;
+    border-radius: 0 35px 35px 0;
+    left: 10px;
+    font-size: 16px;
+    /* 清除边框 */
+    border: 0;
+    /* 清除鼠标悬停边框 */
+    outline: none;
+}
+
+.box p i {
+    font-size: 30px;
+    position: absolute;
+    left:87%;
+    cursor: pointer;
+    transform: scale(0.95);
+}
+
+#username {
+    padding-left: 10px;
+}
+
+#password {
+    padding-left: 10px;
+}
+
+.box p .iconfont {
+    font-size: 20px;
+    
+}
+
+.tips {
+    color: crimson;
+    /* position: absolute; */
+}
+
+button {
+    /* 登入按钮 */
+    width: 65px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bolder;
+    background-color: darkorange;
+    border-radius: 35px;
+    text-align: center;
+    margin: 20px;
+}
+
+button:hover {
+    border: 2px solid greenyellow;
+    box-shadow: 0 0 15px rgb(223, 101, 45);
+}
+
+.register {
+    /* 注册按钮 */
+    background-color: rgb(223, 101, 45);
+}

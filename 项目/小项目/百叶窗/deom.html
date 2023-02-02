@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="box">
+        <div class="xiaobox dabox" style="background-image: url(./img/1-5.jpg);">
+            <h3>我的天空</h3>         
+        </div>
+        <div class="xiaobox dabox" style="background-image: url(./img/1-6.jpg);">
+            <h3>赵元清</h3>
+        </div>
+        <div class="xiaobox dabox" style="background-image: url(./img/s-4.jpg);">
+            <h3>丁扬财</h3>
+        </div>
+        <div class="xiaobox dabox" style="background-image: url(./img/s-3.jpg);">
+            <h3>9420</h3>
+        </div>
+        <div class="xiaobox dabox" style="background-image: url(./img/s-5.jpg);">
+            <h3 id="wb">2157</h3>
+        </div>
+    </div>
+    <script>
+        var divs = document.querySelectorAll('div');
+        var bt = document.getElementById('wb');
+        divs.onclick=function(){
+            console.log(
+                div.style.opacity,
+            )
+        };
+    </script>
+</body>
+</html>

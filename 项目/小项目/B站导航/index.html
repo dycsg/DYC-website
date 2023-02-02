@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>b站导航</title>
+    <style>
+        *{
+            margin: 0;
+            list-style: none;
+            padding: 0;
+            
+        }
+        .dhk{
+            width: 950px;
+            height: 330px;
+            background-color: aqua;
+            margin-top: 12px;
+            margin: 12px auto;
+        }
+        .dhk:nth-child(2){
+            background-color: cornflowerblue;
+        }
+        .dhk:nth-child(3){
+            background-color: coral;
+        }
+        .dhk:nth-child(4){
+            background-color: blueviolet;
+        }
+        .dhk:nth-child(5){
+            background-color: greenyellow;
+        }
+        .dhk:nth-child(6){
+            background-color: violet;
+        }
+        .dhk:nth-child(7){
+            background-color: thistle;
+        }
+        .dhk:nth-child(8){
+            background-color: bisque;
+        }
+        .dhk:nth-child(9){
+            background-color: cornflowerblue;
+        }
+        .dhk:nth-child(10){
+            background-color: coral;
+        }
+        .dhk:nth-child(11){
+            background-color: blueviolet;
+        }
+        .dhk:nth-child(12){
+            background-color: rgb(75, 227, 75);
+        }
+        ul{
+            padding: 0px;
+            width: 50px;
+            height: 370px;
+            background-color: antiquewhite;
+            position: fixed;
+            /*固定定位位置不会滚动条影响*/
+            top: 190px;
+            /*顶部: 元素顶部与浏览器窗口顶部之间距离*/
+            left: 1107px;
+            cursor: pointer;/*鼠标样式*/
+        }
+        li{
+            text-align: center;
+            margin: 8px auto;
+        }
+        li:hover{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div class="dhk">影视区</div>
+    <div class="dhk">番剧区</div>
+    <div class="dhk">音乐区</div>
+    <div class="dhk">鬼畜区</div>
+    <div class="dhk">科技区</div>
+    <div class="dhk">动漫区</div>
+    <div class="dhk">游戏区</div>
+    <div class="dhk">广告区</div>
+    <div class="dhk">舞蹈区</div>
+    <div class="dhk">时尚区</div>
+    <div class="dhk">T V区</div>
+    <div class="dhk">直播区</div>
+    <div class="dhl">
+        <ul>
+            <li>影视</li>
+            <li>番剧</li>
+            <li>音乐</li>
+            <li>鬼畜</li>
+            <li>科技</li>
+            <li>动漫</li>
+            <li>游戏</li>
+            <li>广告</li>
+            <li>舞蹈</li>
+            <li>时尚</li>
+            <li>T V</li>
+            <li>直播</li>
+        </ul>
+    </div>
+    <!-- 引入jquery -->
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script>
+        /**
+         *  1. 点击导航 
+         *  $('li') 页面中所有的li标签
+         *  click() 点击事件 点击这个元素之后 会发生什么事
+        */
+        $('li').click(function(){
+            //$(this)代表点击的li index 获取点击这个li的下标
+            // offset().top 获取这个元素与浏览器顶部之间距离
+            var index = $(this).index()
+            var h = $('.dhk').eq(index).offset().top
+            $("html, body").animate({
+                scrollTop: h + "px"
+            })
+        })
+    </script>
+</body>
+</html>

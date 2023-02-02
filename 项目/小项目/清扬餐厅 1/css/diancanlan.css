@@ -1,0 +1,75 @@
+#menubar{
+    position: fixed;
+    left: 200px;
+    right: 0px;
+    height: 80px;
+    padding: 0 25px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    color: #fff;
+}
+a{
+    color: #fff;
+    cursor: pointer;
+}
+.order{
+    display: flex;
+    
+}
+.order li{
+    margin-top: 10px;
+    margin-right: 20px;
+    font-size: 18px;
+    /* 鼠标手样式 */ 
+    cursor: pointer;
+}
+
+/* 推荐图标黄色 */
+.order li:hover,.order li a.active{
+    color: darkorange;
+}
+/* 字体颜色 */
+.order li a:hover,.order li a.active{
+    color: darkorange;
+}
+.order li a span .iconfont{
+    font-size: 19px;
+}
+.Searchbar{
+    width: 250px;
+    height: 35px;
+    display: flex;
+   
+    box-sizing: border-box;
+}
+.Searchbar input{
+    width: 210px;
+    border-radius: 50px;
+    border: 0;
+    margin-top: 8px;
+    padding-left: 6px;
+     
+}
+.Searchbar button{
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 清除按钮默认样式 */
+    background: transparent;
+    border: 0;
+    outline: none;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+button .iconfont{
+    font-size: 18px;
+    
+}
+.Searchbar button:hover{
+    /* 鼠标经过改变 颜色 按钮变小 */
+    color: darkorange;
+    transform: scale(0.95);
+}

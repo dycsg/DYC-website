@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .box{
+            width: 560px;
+            height: 560px;
+            margin: 50px auto;
+            background-image: url("./dxx.png");
+            background-size: cover;
+            background-color: darkcyan;
+            border: 5px solid ;
+            border-top:  5px solid lightcoral;
+            border-right: 6px solid royalblue;
+            border-left: 5px solid aqua;
+            border-bottom: 5px solid greenyellow;
+        }
+        .m-l,.m-r{
+            float: left;
+            width: 280px;
+            height: 560px;
+            background-color: bisque;
+            transition: 1s;
+        }
+        .m-l{
+            border-right: 2px solid floralwhite;
+        }
+        .m-r{
+            border-left: 2px solid floralwhite;
+            transform: translateX(280px) translateY(-560px);
+        }
+        .box:hover .m-l{
+                transform: translateX(-280px);
+            }
+        .box:hover .m-r{
+                transform: translateX(560px) translateY(-560px);
+            }
+        .m-l-fk,.m-r-fk{
+            width: 200px;
+            height: 200px;
+            /* background-color: black; */
+            margin: 140px auto;
+            animation: love-tiaodong 07s linear infinite alternate;
+            /* 定义动画 动画名称 时间 持续动 无限循环 交替动 */
+        }
+        .love-l,.love-r{
+            width: 90px;
+            height: 160px;
+            background-color: hotpink;
+            float: left;
+            box-shadow: 0px 0px 35px hotpink;
+        }
+        .love-l{
+            border-radius: 45px 45px 0px 0px;
+            transform: translateX(20px) rotate(-45deg);
+        }
+        .love-r{
+            border-radius: 45px 45px 0px 0px;
+            transform: translateX(-20px) rotate(45deg);
+        }
+        @keyframes love-tiaodong{
+            0%{
+                transform: scale(1);
+                /* 放大缩小 值1 */
+            }
+            100%{
+                transform: scale(1.2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="m-l">
+            <div class="m-l-fk">
+                <div class="love-l"></div>
+                <div class="love-r"></div>
+            </div>
+        </div>
+        <div class="m-r">
+            <div class="m-r-fk">
+                <div class="love-l"></div>
+                <div class="love-r"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

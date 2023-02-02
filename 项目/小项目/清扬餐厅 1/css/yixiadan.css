@@ -1,0 +1,127 @@
+#food{
+    position: fixed;
+    top:42px;
+    right: 20px;
+    bottom: 20px;
+    left: 220px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, .2);
+    padding: 10px;
+    overflow: hidden;
+}
+a{
+    color: #fff;
+    cursor: pointer;
+}
+/* 已点 */
+.orderbox{
+    
+    width: 97%;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+.orderbox li{
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 3px 3px rgba(255, 255, 255, 0.3);
+    margin-bottom: 8px;
+    padding: 14px;
+}
+tr td img{
+    width: 60px;
+    height: 60px;
+    border-radius: 3px;
+}
+.orderbox table{
+    width: 99%;
+}
+.orderbox td{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 5px 0;
+    text-align: center;
+}
+.orderbox td:nth-child(1){
+    width: 5%;
+}
+.orderbox td:nth-child(6){
+    width: 20%;
+    /* 多出来的备注不换行变省略号 */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.orderbox button{
+    width: 25px;
+    height: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: transparent;
+    vertical-align: middle;
+}
+.orderbox button:hover{
+    color: darkorange;
+    transform: scale(1.1);
+}
+.orderbox span{
+    font-size: 14px;
+    background: transparent;
+}
+.orderbox button.select span{
+    font-size: 20px;
+}
+.orderbox .num{
+    width: 60px;
+    height: 25px;
+    line-height: 25px;
+    display: inline-block;
+    /* 行内快级元素 */
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    font-size: 10px;
+    vertical-align: middle;
+}
+.orderbox td:nth-child(4){
+    font-size: 0;
+}
+.orderbox .foot{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 10px 0;
+}
+.orderbox .foot span{
+    margin-left: 30px;
+}
+.orderbox .foot strong{
+    color: darkorange;
+    font-size: 18px;
+}
+.orderbox .add{
+    width: 45px;
+    height: 30px;
+    background-color: indianred;
+    border-radius: 5px;
+}
+.orderbox .pay{
+    width: 48px;
+    height: 33px;
+    background-color: lime;
+    border-radius: 5px;
+                                                                                                                                                                                                                   
+}
+
+
+/* 已下单 */
+.shopped th{
+    height: 40px;
+    text-align: center;
+}
+.shopped th:nth-child(4){
+    position: relative;
+    transform: translateX(130px);
+}
+.shopped th:nth-child(5){
+    text-align: right;
+    position: relative;
+    transform: translateX(110px);
+}
+
+

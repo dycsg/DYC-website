@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.box{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.xiaobox{
+    width: 80px;
+    height: 550px;
+    border-radius: 70px;
+    margin: 0 auto;
+    flex-direction: column;
+    /* 竖着排列 */
+    cursor: pointer;
+    transition: all .7s ease-in;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.xiaobox:nth-child(1):hover{
+    transition: all 1s;
+    width: 70%;
+    height: 550px;
+    margin: 30px;
+}
+
+.xiaobox:nth-child(2):hover{
+    transition: all .7s ease-in;
+    width: 70%;
+    height: 550px;
+    margin: 30px;
+}
+.xiaobox:nth-child(3):hover{
+    transition: all 1s;
+    width: 70%;
+    height: 550px;
+    margin: 30px;
+}
+.xiaobox:nth-child(4):hover{
+    transition: all 1s;
+    width: 70%;
+    height: 550px;
+    margin: 30px;
+}
+.xiaobox:nth-child(5):hover{
+    transition: all 1s;
+    width: 70%;
+    height: 550px;
+    margin: 30px;
+    opacity: calc(1);
+
+}
+h3{
+    color: #fff;
+    position: relative;
+    top: 85%;
+    left: 10%;
+    font-size: 22px;
+    margin: 0;
+    opacity: 0;
+}
+/* .xiaobox.dabox{
+    flex: 5;
+} */
+/* .xiaobox.dabox h3 {
+
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
+} */

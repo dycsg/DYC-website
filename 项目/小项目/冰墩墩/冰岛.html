@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        body{
+            background-color: cornflowerblue;
+        }
+        .box{
+            width: 600px;
+            height: 600px;
+            /* background-color: aqua; */
+            margin: 100px auto;
+        }
+        .body{
+            width: 390px;
+            height: 470px;
+            background-color: azure;
+            /* float: left; */
+            border-radius: 377px 364px 400px 400px;
+            margin: 50px auto;
+            transform: translateY(2px);
+        }
+        .rd-l,.rd-r{
+            float: left;
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            border-radius: 45px 45px 0 0;
+        }
+        .q{
+            width: 320px;
+            height: 300px;
+            background-color: blue;
+            border-radius: 180px 180px 180px 180px;
+            margin: 0px auto;
+            transform: translateY(15px);
+        }
+        .qq{
+            width: 305px;
+            height: 285px;
+            background-color: rgb(214, 255, 6);
+            border-radius: 180px 180px 180px 180px;
+            margin: 0px auto;
+            transform: translateY(-280px);
+        }
+        .qqq{
+            width: 285px;
+            height: 265px;
+            background-color: rgb(6, 255, 14);
+            border-radius: 180px 180px 180px 180px;
+            margin: 0px auto;
+            transform: translateY(-553px);
+        }
+        .qqqq{
+            width: 272px;
+            height: 255px;
+            background-color: rgb(255, 6, 6);
+            border-radius: 180px 180px 180px 180px;
+            margin: 0px auto;
+            transform: translateY(-813px);
+        }
+        .qqqqq{
+            width: 261px;
+            height: 242px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 180px 180px 180px 180px;
+            margin: 0px auto;
+            transform: translateY(-1061px);
+        }
+        .hyq-l,.hyq-r{
+            width: 70px;
+            height: 100px;
+            background-color: black;
+            border-radius: 65px;
+        }
+        .hyq-l{
+            transform: translateX(165px) translateY(32px) rotate(144deg);
+        }
+        .hyq-r{
+            transform: translateX(20px) translateY(-61px) rotate(28deg);
+        }
+        .yb{
+                width: 50px;
+                height: 50px;
+                background-color: azure;
+                border-radius: 45px;
+                transform: translateX(13px) translateY(43px);
+        }
+        .yj{
+            width: 45px;
+            height: 45px;
+            background-color: black;
+            border-radius: 45px;
+            transform: translateX(3px) translateY(2px);
+        }
+        .ygl{
+            width: 12px;
+            height: 12px;
+            background-color: aliceblue;
+            border-radius: 45px;
+            transform: translateX(20px) translateY(28px);
+        }
+        .ygr{
+            width: 8px;
+            height: 8px;
+            background-color: aliceblue;
+            border-radius: 45px;
+            transform: translateX(24px) translateY(3px);
+        }
+        .yb2{
+            width: 50px;
+            height: 50px;
+            background-color: azure;
+            border-radius: 45px;
+            transform: translateX(9px) translateY(7px);
+        }
+        .yj2{
+            width: 45px;
+            height: 45px;
+            background-color: black;
+            border-radius: 45px;
+            transform: translateX(3px) translateY(2px);
+        }
+        .yg1{
+            width: 12px;
+            height: 12px;
+            background-color: aliceblue;
+            border-radius: 45px;
+            transform: translateX(17px) translateY(5px);
+        }
+        .yg2{
+            width: 8px;
+            height: 8px;
+            background-color: aliceblue;
+            border-radius: 45px;
+            transform: translateX(9px) translateY(8px);
+        }
+        .bz{
+            width: 30px;
+            height: 25px;
+            background-color: black;
+            border-radius: 45px;
+            margin: 0px auto;
+            transform: translateY(-94px);
+        }
+        .bz1{
+            width: 8px;
+            height: 8px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 45px;
+            transform: translateX(16px) translateY(4px);
+        }
+        .zb{
+            width: 45px;
+            height: 5px;
+            border-radius: 5px;
+            margin: 0px auto;
+            transform: translateY(-79px);
+            background-color: rgb(0, 0, 0);
+        }
+        .zb1{
+            width: 25px;
+            height: 18px;
+            background-color: darkred;
+            border-radius: 0px 0px 45px 45px;
+            margin: 0px auto;
+            transform: translateY(-52px);
+            border: 3px solid black;
+        }
+        .rd-l{
+            transform: translateY(-521px)  translateX(133px) rotate(-39deg);
+        }
+        .rd-r{
+            transform: translateY(-529px)  translateX(360px) rotate(37deg);
+        }
+        .jj-l,.jj-r{
+            float: left;
+            width: 80px;
+            height: 100px;
+            background-color: black;
+            border-radius: 45px 45px 0 0;
+        }
+        .jj-l{
+            transform: translateY(-57px)  translateX(101px) rotate(194deg);
+        }
+        .jj-r{
+            transform: translateY(-68px)  translateX(172px) rotate(158deg);
+        }
+        .ss-l,.ss-r{
+            float: left;
+            width: 70px;
+            height: 90px;
+            background-color: black;
+            border-radius: 45px 45px 30px 30px;
+        }
+        .ss-l{
+            transform: translateY(-322px)  translateX(-232px) rotate(266deg);
+        }
+        .ss-r{
+            transform: translateY(-340px)  translateX(171px) rotate(458deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="body">
+            <div class="q"></div>
+            <div class="qq"></div>
+            <div class="qqq"></div>
+            <div class="qqqq"></div>
+            <div class="qqqqq">
+                <div class="hyq-l">
+                    <div class="yb">
+                        <div class="yj">
+                            <div class="ygl"></div>
+                            <div class="ygr"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hyq-r">
+                    <div class="yb2">
+                        <div class="yj2">
+                            <div class="yg1"></div>
+                            <div class="yg2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bz">
+                    <div class="bz1"></div>
+                </div>
+                <div class="zb1"></div>
+                <div class="zb"></div>
+            </div>
+        </div>
+        <div class="rd-l"></div>
+        <div class="rd-r"></div>
+        <div class="jj-l"></div>
+        <div class="jj-r"></div>
+        <div class="ss-l"></div>
+        <div class="ss-r"></div>
+    </div>
+</body>
+</html>

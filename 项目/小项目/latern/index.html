@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>过年啦！</title>
+    <link rel="stylesheet" href="./lantern.css">
+</head>
+<body>
+    <div class="content">
+        <div class="lantern-box">
+            <div class="lantern-line"></div>
+            <div class="lantern-body">
+                <!-- 灯笼中间的线条 -->
+                <div class="lantern-circle">
+                    <div class="lantern-rect">
+                        <!-- 灯笼中间的文字内容 -->
+                        <div class="lantern-text">新年快乐</div>
+                    </div>
+                </div>
+                <!-- 灯笼穗 -->
+                <div class="lantern-tassel"></div>
+            </div>
+        </div>
+        <div class="lantern-box">
+            <div class="lantern-line"></div>
+            <div class="lantern-body">
+                <!-- 灯笼中间的线条 -->
+                <div class="lantern-circle">
+                    <div class="lantern-rect">
+                        <!-- 灯笼中间的文字内容 -->
+                        <div class="lantern-text">新年快乐</div>
+                    </div>
+                </div>
+                <!-- 灯笼穗 -->
+                <div class="lantern-tassel"></div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="bgMusic" src="m.mp3" autoplay></audio>
+    <iframe allow="autoplay" style="display:none" src="m.mp3"></iframe>
+
+    <script>
+        document.body.addEventListener('mousedown', function(){
+            var myAuto = document.getElementById('bgMusic');
+            myAuto.play();
+        }, false);
+    </script>
+</body>
+</html>

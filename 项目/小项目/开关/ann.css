@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #000;
+}
+.box{
+ 
+    position: relative;
+    top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 60px;
+    /* 竖着排列 */
+
+}
+.box a{
+    position: relative;
+    
+    text-decoration: none;
+    /* 清除a标签下划线  */
+    padding: 20px;
+    color: #fff;
+    background: #27282c;
+    width: 150px;
+    height: 80px;
+    border: 2px solid rgb(68, 68, 68);
+    font-size: 30px;
+    text-align: center;
+    transition: 0.5s;
+    
+}
+.box a:hover{
+    border-color: var(--clr);
+    color: var(--clr);
+    box-shadow: 0 0 35px var(--clr);
+    transform: scale(1.05);
+    
+}
+.box a::after{
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: var(--clr);
+    top: -6px;
+    left: 8px;
+    border-color: var(--clr);
+    position: absolute;
+}
+.box a::before{
+    transition: 0.5;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: var(--clr);
+    top: 72px;
+    left: 128px;
+    border-color: var(--clr);
+    position: absolute;
+    transition: 0.5s;
+}
+a:hover i::before{
+    transform: translateX(10px) translateY(20px);
+    transition: 0.5s;
+}
+
+

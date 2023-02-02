@@ -1,0 +1,140 @@
+body,dl,dd{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+.table{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 5px 5px 6px #ccc;
+}
+.table dt,.list h3{
+    /* 两个h3标签，用了群组选择器 */
+    color: #ff8400;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 12px;
+    border-bottom: 2px solid #ccc;
+}
+.table dd{
+    display: inline-block;
+    padding: 10px;
+}
+.table dd div{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+}
+.table dd strong{
+    color: #ff8400;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+.table div span{
+    color: #ccc;
+}
+.table dd div::before{
+    content: '';
+    width: 2px;
+    height: 100%;
+    right: -15px;
+    position: absolute;
+    background: linear-gradient(#fff, #ccc, #Fff);
+}
+
+/* 桌台模式 */
+.list{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 5px 5px 6px #ccc;
+} 
+.list ul{
+    padding: 10px;
+    overflow: hidden;
+}
+.list li{
+    width: 130px;
+    height: 110px;
+    border: 1px solid #afafaf;
+    float: left;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px;
+}
+.list li div{
+    height: 68%;
+    color: #fff;
+    text-align: center;
+    line-height: 68px;
+    position: relative;
+    overflow: hidden;
+    font-size: 25px;
+    background-color: darkgray;
+}
+.list li div span{
+    font-size: 27px;
+    margin-right: 10px;
+}
+.list li p{
+    margin: 0;
+    height: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+}
+.list li div button{
+    width: 100%;
+    height: 100%;
+    background: #66a8a6;
+    left: 0;
+    position: absolute;
+    border: 0;
+    font-size: 20px;
+    color: #fff;
+    transform: translateY(-130px);
+    transition: .3s;
+}
+/* 点餐中 */
+.list li.eating{
+    border-color: #e5553f;
+}
+.list li.eating div{
+    background-color: #e5553f;
+    cursor: pointer;
+}
+.list li.eating p{
+    color: #e5553f;
+    cursor: pointer;
+}
+.list li div:hover button{
+    transform: translateY(0px);
+}
+/* 就餐中 */
+.list li.ordering{
+    border-color: #fc9723;
+}
+.list li.ordering div{
+    background-color: #fc9723;
+    cursor: pointer;
+}
+.list li.ordering p{
+    color: #fc9723;
+    cursor: pointer;
+}
+
+.rounded-list a:before{
+    display: none;
+}
