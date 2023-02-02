@@ -1,0 +1,240 @@
+.function4{
+    min-height: 100vh;
+    /* background-image: linear-gradient(to right bottom ,#47e791 ,rgba(160, 81, 100, 0.4) ,#f589); */
+    box-sizing: border-box;
+    background-color: #dfe8f2;
+    padding: 12px 12px;
+    margin-top: 88px;
+    margin-left: 190px;
+}
+.gys-search{
+    margin: 10px;
+}
+.gys-search input{
+    width: 180px;
+    height: 45px;
+    padding-left: 5px;
+    border-radius: 3px;
+    font-size: 15px;
+}
+.gys-search .seek-btn{
+    width: 45px;
+    height: 45px;
+    background-color: #00695a;
+    border: none;
+    border-radius: 3px;
+}
+.gys-search .seek-btn:hover{
+    transform: scale(0.95);
+    border: 2px solid #53aa9d;
+}
+.gys-search .seek-btn span{
+    font-size: 22px;
+    color: #fff;
+}
+.gys-item{
+    background-color: gainsboro;
+    margin: 10px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 10px;
+}
+.gys-item .gys-add{
+    height:40px;
+    width: 60px;
+    background-color: rgb(19, 139, 213);
+    border: 2px solid  rgb(33, 171, 221);
+}
+.gys-item .gys-add:hover{
+    transform: scale(0.92);
+}
+.gys-item .gys-date{
+    padding-left: 5px;
+}
+.gys-item i{
+    color: red;
+    content: attr(count);
+}
+/* 弹窗部分 */
+/* .gys-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+}
+.gys-footer{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    height: 80%;
+    border-radius: 5px;
+    margin: 5% auto;
+    animation: donghua 1s;
+}
+@keyframes donghua {
+    0%{
+        transform: rotateX(80deg);
+    }
+    100%{
+        transform: rotateX(0deg);
+    }
+}
+#gys-header{
+    height: 40px;
+}
+#header-right{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: red;
+    color: #FFF;
+    right: 5px;
+    top: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+#gys-header{
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    position: relative;
+    
+}
+#gys-header p{
+    padding-left: 10px;
+    font-size: 18px;
+}
+#gys-header form{
+    padding-left: 10px;
+    font-size: 18px;
+}
+#gys-header input{
+    margin: 8px;
+    padding-left: 5px;
+    width: 200px;
+    height: 45px;
+    font-size: 17px;
+}
+#gys-header button{
+    position: relative;
+    top: 40px;
+    left: 100px;
+    margin-left: 110px;
+    width: 60px;
+    font-size: 17px;
+    height: 45px;
+} */
+/* 遮罩层 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* 弹窗 */
+.modal-content {
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    margin-left: -25%;
+    width: 45%;
+    height: 70%;
+    min-width: 31.125rem;
+    min-height: 18.625rem;
+    border-radius: .125rem;
+    background-color: white;
+    z-index: 2;
+    animation: donghua 1s;
+}
+@keyframes donghua {
+    0%{
+        transform: rotateX(80deg);
+    }
+    100%{
+        transform: rotateX(0deg);
+    }
+}
+.modal-body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.mb_revise {
+    padding: .625rem 0 0 1.5625rem;
+}
+
+.mb_revise>p {
+    padding-left: .25rem;
+    margin-top: .125rem;
+    font-family: 'FangSong', Times, serif;
+    font-size: 15px;
+    border-left: solid .125rem royalblue;
+}
+
+/* 确定和取消 */
+.determine,
+.cancen {
+    position: absolute;
+    width: 3.625rem;
+    height: 2.1875rem;
+    color: #fff;
+    border: 0;
+    outline: none;
+    box-shadow: 0 .125rem .125rem rgb(107, 96, 96);
+    cursor: pointer;
+}
+
+.determine {
+    right: 6.5rem;
+    bottom: .725rem;
+    background-color: rgba(9, 139, 245, 0.788);
+}
+
+.cancen {
+    right: 2rem;
+    bottom: .725rem;
+    background-color: rgba(212, 37, 37, 0.788);
+}
+
+.determine:hover,
+.cancen:hover {
+    color: #fff;
+    box-shadow: 0 .134rem .1275rem rgb(58, 57, 57);
+}
+
+.determine:active,
+.cancen:active {
+    box-shadow: 0 .134rem .1275rem rgba(230, 227, 227, .758);
+}
+
+.mb_revise p{
+    padding-left: 10px;
+    font-size: 18px;
+}
+.mb_revise form{
+    padding-left: 10px;
+    font-size: 18px;
+}
+.mb_revise input{
+    margin: 8px;
+    padding-left: 5px;
+    width: 200px;
+    height: 45px;
+    font-size: 17px;
+}
+
+/* 表单鼠标经过效果 */
+.tab-xiao:hover{
+    background-color: rgba(230, 227, 227, .758);
+}

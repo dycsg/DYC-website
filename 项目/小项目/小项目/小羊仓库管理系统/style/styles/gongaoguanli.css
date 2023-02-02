@@ -1,0 +1,28 @@
+.function2{
+    min-height: 100vh;
+    /* background-image: linear-gradient(to right bottom ,#47e791 ,rgba(160, 81, 100, 0.4) ,#f589); */
+    box-sizing: border-box;
+    background-color: #dfe8f2;
+    padding: 12px 12px;
+    margin-top: 85px;
+    margin-left: 190px;
+}
+.tab-da .tab-da-btn input{
+    margin-top: 4px;
+    width: 20px;
+    height: 20px;
+}
+.tab-da .chaozhuo{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.tab-da .content{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.tab-xiao tr td:nth-child(5){
+    margin: 0 10px 0 10px;
+}
+
+
+

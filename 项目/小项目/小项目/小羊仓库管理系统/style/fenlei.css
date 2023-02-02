@@ -1,0 +1,98 @@
+/* CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+    font-family: 'iconfont';  /* Project id 3711599 */
+    src: url('//at.alicdn.com/t/c/font_3711599_j4j0wpdgo3.woff2?t=1666009661933') format('woff2'),
+         url('//at.alicdn.com/t/c/font_3711599_j4j0wpdgo3.woff?t=1666009661933') format('woff'),
+         url('//at.alicdn.com/t/c/font_3711599_j4j0wpdgo3.ttf?t=1666009661933') format('truetype');
+  }
+
+.function3{
+    /* background-image: linear-gradient(to right bottom ,#47e791 ,rgba(160, 81, 100, 0.4) ,#f589); */
+    box-sizing: border-box;
+    padding: 12px 12px;
+    margin-top: 80px;
+    margin-left: 230px;
+}
+#subbar{
+    position: relative;
+    width: 200px;
+    height: 100vh;
+    background-color: darkgrey;
+}
+.project{
+    overflow: hidden;
+    /* 清除浮动 */
+}
+.project li{
+    position: relative;
+    margin: 15px;
+    font-size: 17px;
+    float: left;
+    /* 浮动 */
+    width: 130px;
+    height: 122px;
+    border-radius: 6px;
+    border: 3px solid rgb(153, 151, 151);
+    background-color: rgb(194, 192, 188);
+
+}
+.project li div{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+.icon{
+    justify-content: center;
+    flex-direction: column;
+}
+.icon .iconfont{
+    font-size: 70px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    color: darkorange;
+}
+.icon .name{
+    color: beige;
+}
+.project .eidt{
+    justify-content: space-around;
+    /* 分散居中对齐 */ 
+    overflow: hidden;
+    background: rgba(0,0,0,.9);
+
+    opacity: 0;
+}
+.eidt .iconfont{
+    color: #b9c6dd;
+    font-size: 35px;
+    cursor: pointer;
+}
+.eidt .iconfont:hover{
+    color: darkorange;
+}
+.project li:hover .eidt{
+    transition: .5s;
+    cursor: pointer;
+    opacity: 1;
+}
+li .add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(120, 112, 112);
+    font-size: 110px;
+    cursor: pointer;
+}
+.add span:hover{
+    color: darkorange;
+}
+.add:hover{
+    background: gray;
+}

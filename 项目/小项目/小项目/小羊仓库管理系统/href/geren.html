@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/gongyong-img/logo.ico">
+    <!-- 导航样式 -->
+    <link rel="stylesheet" href="/style/index.css">
+    <link rel="stylesheet" href="/style/geren.css">
+    <!-- jQuery -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <title>个人中心</title>
+</head>
+<body> 
+    <!-- 固定导航 -->
+    <div class="hentiao">
+                <h2>仓库管理</h2>
+                <span class="ht-btn">
+                    <button>
+                        <span class="iconfont">&#xeacc;</span>
+                        <p>刷新</p>
+                    </button>
+                    <!-- 刷新 -->
+                    <button>
+                        <span class="iconfont">&#xe601;</span>
+                        <p>菜单</p>
+                    </button>
+                    <!-- 菜单 -->
+                    <button onclick="window.location.href='/index.html'">
+                        <span class="iconfont">&#xe602;</span>
+                        <p>退出</p>
+                    </button>
+                    <!-- 退出 -->
+                </span>
+    </div>
+    
+    <!-- 小导航栏 -->
+    <div class="xiaodaohang">
+                <div class="xdh-r">
+                    <span class="iconfont">&#xe60d;</span>
+                    <!-- 图标 -->
+                    <span class="xdh-text" onclick="window.location.href=''">个人信息编辑</span>
+                    <!-- 文字-添加点击事件 -->
+                </div>
+        
+    </div>
+            
+    <!-- 左边导航 -->
+    <div class="shutiao">
+                <div class="st-top">
+                    <img src="/gongyong-img/figure.jpg" alt="">
+                    <div class="search"> 
+                        <!-- 搜索框 -->
+                        <input type="text">
+                        <button class="iconfont">&#xe8d6;</button>
+                    </div>
+                </div>
+        
+                <div class="st-tottom">
+                                            <!-- id 被选中 -->
+                    <li class="liebiao"  id="baixuanzhong" onclick="window.location.href='/href/geren.html'">
+                        <span> 
+                            <span class="iconfont">&#xeb53;</span>个人中心
+                        </span>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </li>
+        
+                    <li class="liebiao" onclick="window.location.href='/href/yuagong.html'">
+                        <span>
+                            <span class="iconfont">&#xe600;</span>员工管理
+                        </span>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </li>
+        
+                    <li class="liebiao" onclick="window.location.href='/href/gongyingshang.html'">
+                        <span>
+                            <span class="iconfont">&#xe88d;</span>供应商管理
+                        </span>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </li>
+        
+                    <li class="liebiao" onclick="window.location.href='/href/fenlei.html'">
+                        <span>
+                            <span class="iconfont">&#xe65c;</span>商品分类管理
+                        </span>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </li>
+                    <li class="liebiao" onclick="window.location.href='/href/caigo.html'">
+                        <span>
+                            <span class="iconfont">&#xe607;</span> 货物采购管理
+                        </span>
+                        <ul>
+        
+                            <li></li>
+                        </ul>
+                    </li>
+        
+                    <li class="liebiao" onclick="window.location.href='/href/xingxi.html'">
+                        <span>
+                            <span class="iconfont">&#xeb51;</span> 商品信息管理
+                        </span>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </li>
+        
+                    <li class="liebiao" onclick="window.location.href='/href/ruku.html'">
+                        <span>
+                            <span class="iconfont">&#xeacb;</span> 商品入库管理
+                        </span>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </li>
+        
+                    <li class="liebiao" onclick="window.location.href='/href/chuku.html'">
+                        <span>
+                            <span class="iconfont">&#xeaca;</span> 商品出库管理
+                        </span>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </li>
+        
+                    <li class="liebiao" onclick="window.location.href='/href/kefu.html'">
+                        <span>
+                            <span class="iconfont">&#xeb53;</span> 在线沟通管理
+                        </span>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </li>
+        
+                    <li class="liebiao" onclick="window.location.href='/href/pandian.html'">
+                        <span>
+                            <span class="iconfont">&#xe640;</span> 货物盘点管理
+                        </span>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </li>
+        
+                    <li class="liebiao" onclick="window.location.href='/href/gonggao.html'">
+                        <span>
+                            <span class="iconfont">&#xe65b;</span> 公告信息管理
+                        </span>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </li>
+        
+                    <li class="liebiao" onclick="window.location.href='/href/gongyingshanghuowu.html'">
+                        <span>
+                            <span class="iconfont">&#xeac8;</span> 供应商货物管理
+                        </span>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </li>
+                </div>
+    </div>
+
+
+    <!-- 功能部分 -->
+    <div class="function">
+        <!-- 头像 -->
+        <ul class="edit-da">
+            <li class="edit-xao">
+                <p style="font-size: 18px; padding-left: 15px;">头像：</p>
+                    <a href="javascript:;" class="file" style="width: 65px; height: 20px; margin-right: 10px;">选择文件
+                        <input type="file" name="img" required>
+                    </a>
+                    <img id="img" height="100px" width="100px" src="" style="border-radius: 50%;">
+                    <!-- <div class="form-group row">
+                        <label class="col-sm-2 col-form-label"></label>
+                         <div class="col-sm-10">
+                            <button type="button" class="btn btn-primary" onclick="return preserve()">保存</button>
+                        </div>
+                    </div> -->
+            </li>
+        </ul>
+
+        <!-- 姓名 -->
+        <ul class="edit-da">
+            <li class="edit-xao">
+                <label for="" id="lab">名称：</label>
+                <input type="text" placeholder="中文" id="xingming" onblur="checkId()">
+                <div id="cw-xingming" style="color: red; font-size: 12px;"></div>
+                <label for="" id="xingbie">性别：
+                    <input type="radio" name="gender" id="nan" style="cursor:pointer">
+                    <label for="nan">男</label>
+                    <input type="radio" name="gender" id="nv" style="cursor:pointer">
+                    <label for="nv">女</label>
+                </label>
+               
+            </li>
+        </ul>
+        <ul class="edit-da">
+            <li class="edit-xao">
+                <label for="" id="lab">地区：</label>
+                <select name="addresss" id="" style="font-size: 16px;">
+                        <option value="">江西省</option>
+                        <option value="">湖南省</option>
+                        <option value="">浙江省</option>
+                        <option value="">河北省</option>
+                        <option value="">山西省</option>
+                        <option value="">辽宁省</option>
+                        <option value="">福建省</option>
+                        <option value="">广东省</option>
+                        <option value="">海南省</option>
+                        <option value="">云南省</option>
+                        <option value="">四川省</option>
+                </select>
+                <select name="addresss" id="" style="font-size: 16px;">
+                    <option value="">赣州市</option>
+                    <option value="">南昌市</option>
+                    <option value="">九江市</option>
+                    <option value="">吉安市</option>
+                    <option value="">宜昌市</option>
+                    <option value="">上饶市</option>
+                    <option value="">萍乡市</option>
+                </select>
+                <select name="addresss" id="" style="font-size: 16px;">
+                    <option value="">于都县</option>
+                    <option value="">信丰县</option>
+                    <option value="">兴国县</option>
+                    <option value="">寻乌县</option>
+                    <option value="">宁都县</option>
+                </select>
+                
+            </li>
+        </ul>
+
+        <ul class="edit-da">
+            <li class="edit-xao">
+                <label for="" id="lab">详细地址：</label>
+                <textarea name="" id="" cols="30" rows="5" style="padding: 8px; font-size: 16px;"></textarea>
+            </li>
+        </ul>
+        
+        <ul class="edit-da">
+            <li class="edit-xao">
+                <label for="" id="lab">出生日期：</label>
+                <input type="text" id="datepicker" style="padding-left: 8px; font-size: 17px; width: 180px; height: 35px;">
+            </li>
+        </ul>
+
+         <!-- 提交 -->
+        <div class="page">
+            <div class="page-content">
+                <button id="login-tj" onclick="toggle()">提交</button>
+            </div>
+        </div>
+
+        <!-- 提交弹窗 -->
+        <div class="modal">
+            <div class="modal-content">
+                <p>你确认提交你的信息嘛！</p>
+                <button onclick="toggle()">确定</button>
+            </div>
+          </div>
+    </div>
+    <script>
+    //日历控件
+    $( function() {
+        $( "#datepicker" ).datepicker();
+    } );
+
+
+    // 提交
+    function toggle() {
+          document.body.classList.toggle('active');
+          const modal = document.querySelector('.modal');
+          if (document.body.classList.contains('active')) {
+            modal.style.display = 'block';
+          }
+        }
+        // 预览图片js
+        function preserve()
+    {
+        var formData    = new FormData();
+        var img = $("[name='img']").prop('files')[0];/*获取上传图片的信息*/
+        formData.append("img",img);
+        $.ajax({
+            type : "post",
+            url : "{:URL('admin/Banner/shopbanneradd')}",/*此处填写上传路径*/
+            processData : false,
+            contentType : false,
+            data : formData,
+            success : function(data) {
+
+            }
+        });
+    }
+
+</script>
+<!-- 上传图片并预览的js文件 start  无需改动-->
+<script type="text/javascript">
+    var small_img = document.querySelector('input[name=small_img]');
+    var img = document.querySelector('input[name=img]');
+    small_imgs = document.querySelector('#small_img');
+    imgs = document.querySelector('#img');
+    if (small_img) {
+        small_img.addEventListener('change', function() {
+            var file = this.files[0];
+            var reader = new FileReader();
+            // 监听reader对象的的onload事件，当图片加载完成时，把base64编码賦值给预览图片
+            reader.addEventListener("load", function() {
+                small_imgs.src = reader.result;
+            }, false);
+            // 调用reader.readAsDataURL()方法，把图片转成base64
+            reader.readAsDataURL(file);
+            $("img").eq(0).css("display", "block");
+        }, false);
+    }
+    if(img){
+        img.addEventListener('change', function() {
+            var file = this.files[0];
+            var reader = new FileReader();
+            // 监听reader对象的的onload事件，当图片加载完成时，把base64编码賦值给预览图片
+            reader.addEventListener("load", function() {
+                imgs.src = reader.result;
+            }, false);
+            // 调用reader.readAsDataURL()方法，把图片转成base64
+            reader.readAsDataURL(file);
+            $("img").eq(1).css("display", "block");
+        }, false);
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./gongyong-img/logo.ico">
+    <title>仓库管理系统</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            background-image: url("/gongyong-img/bj.jpg");
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            user-select: none;
+        }
+        .box{
+            width: 370px;
+            height: 420px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgb(87, 87, 87);
+            border-radius: 5px;
+        }
+        .login{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .login img{
+            width: 80px;
+            height: 80px;
+        }
+        .inputs{
+            display: flex;
+            flex-direction: column;
+            margin: 40px;
+            margin-top: -10px;
+            user-select: none;
+
+        }
+        .inputs input{
+            font-size: 16px;
+            margin-top: 20px;
+            height: 45px;
+            padding-left: 10px;
+            
+        }
+        .dianxun{
+            display: flex;
+            align-items: center;
+            margin-top: -22px;
+        }
+        form input{
+            margin-left: 50px;
+            cursor: pointer;
+        }
+        span{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        span button{
+            width: 270px;
+            font-size: 17px;
+            height: 40px;
+            font-weight: 900;
+            letter-spacing: 10px;
+            margin-top: 30px;
+            border-color: #fff;
+            border-radius: 3px;
+            background-color: #409EFF;
+            color: #fff;
+        }
+        .btn{
+            display: flex;
+            justify-content: space-around;
+            
+        }
+        .btn button{
+            margin: 35px 60px 10px 40px;
+            cursor: pointer;
+        }
+        .btn button:hover{
+            background-color: #409EFF;
+            border: none;
+            border-radius: 4px;
+        }
+        @keyframes inputdonghua{
+            0%{
+                margin-left: 0;
+            }
+            25%{
+                margin-left: 0.5rem;
+            }
+            50%{
+                margin-left: 0;
+            }
+            75%{
+                margin-left: -0.5rem;
+            }
+            100%{
+                margin-left: 0;
+            }
+        }
+        .password:invalid{
+            color: red;
+            animation: inputdonghua 0.2s ease-in-out  infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="login">
+            <img src="./gongyong-img/logo.ico" alt="" onclick="requestFullscreen()">
+            <h1>小羊仓库</h1>
+        </div>
+        <div class="inputs">
+            <input type="text" placeholder="账号" class="uzname" id="name" onblur="checkId()">
+            <!-- 错误提示 -->
+            <div id="cw-uzname" style="color: red; font-size: 12px;"></div>           
+            <input type="password" placeholder="密码"  class="password" id="pswd" onblur="checkid()" pattern="[0-9]*">
+                                                                         <!-- 需要注意账号和密码的onblur要不一样 -->
+            <div id="cw-psword" style="color: red; font-size: 12px;"></div>
+        </div>
+        <form action="" class="dianxun">
+            <input type="radio" name="dianxun" value="货主" checked="checked">货主
+            <input type="radio" name="dianxun" value="采购">采购
+            <input type="radio" name="dianxun" value="管理员">管理员
+        </form>
+        <!-- window.location.href='' -->
+        <span>
+            <button onclick="login();">登入</button>
+        </span>
+        <div class="btn">
+            <button>忘记密码</button>
+            <button>用户注册</button>
+        </div>
+    </div>
+
+<script>
+    //登入按钮验证变量
+    let flag1=false;
+    let flag2=false;
+
+
+    function $(id){
+        return document.getElementById(id);
+    }
+    //账号验证
+    function checkId(){
+        //获取输入的账号  id
+        let userName = $("name").value;  
+        //判断是否为空
+        if(userName == "" || userName == null){
+            $("cw-uzname").innerText ='*账号不能为空';
+            return;
+        }
+        //长度4-12
+        if(userName.length <3 || userName.length > 12){
+            $("cw-uzname").innerText  ="*长度在4-12之间";
+            return;
+        }
+        flag1=true;
+    };
+    //密码验证
+    function checkid(){
+        let userName = $("pswd").value;
+        if(userName == "" || userName == null){
+            $("cw-psword").innerText ="*密码不能为空";
+            return;
+        }
+        flag2=true;    //登入需要的验证
+    }
+
+    //登入按钮验证
+    function login(){
+        if(flag1 && flag2){
+            //只有两跟flag满足条件时，才能进行验证
+            //默认账号DYC123密码123456
+
+            // 获取输入账号密码
+            let userName =$("name").value;
+            let userpswd =$("pswd").value;
+
+            //判断账号密码是否正确
+            if(userName == "DYC" && userpswd == "123456"){
+                //正确则进入该界面
+                window.location.href="/href/geren.html";
+            }
+            else{
+                alert("账号或密码错误！请重新输入。")
+            }
+        }
+        else{
+            alert("账号或密码不符合规定！")
+        }
+    }
+</script>
+</body>
+</html>

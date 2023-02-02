@@ -1,0 +1,12 @@
+.functions10{
+    
+    /* background-image: linear-gradient(to right bottom ,#47e791 ,rgba(160, 81, 100, 0.4) ,#f589); */
+    box-sizing: border-box;
+    background-color: #dfe8f2;
+    padding: 12px 12px;
+    margin-top: 40px;
+    margin-left: 190px;
+    position: relative;
+    background: url(../images/53bg.png) no-repeat;
+    background-size: 100%;
+}

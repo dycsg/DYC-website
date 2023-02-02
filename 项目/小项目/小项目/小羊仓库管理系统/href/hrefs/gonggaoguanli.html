@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style/index.css">
+    <link rel="stylesheet" href="/style/xingxi.css">
+    <link rel="stylesheet" href="/style/styles//gongaoguanli.css">
+
+</head>
+<body>
+       <!-- 固定导航 -->
+       <div class="hentiao">
+        <h2>仓库管理</h2>
+        <span class="ht-btn">
+            <button>
+                <span class="iconfont">&#xeacc;</span>
+                <p>刷新</p>
+            </button>
+            <!-- 刷新 -->
+            <button>
+                <span class="iconfont">&#xe601;</span>
+                <p>菜单</p>
+            </button>
+            <!-- 菜单 -->
+            <button onclick="window.location.href='/index.html'">
+                <span class="iconfont">&#xe602;</span>
+                <p>退出</p>
+            </button>
+            <!-- 退出 -->
+        </span>
+</div>
+
+<!-- 小导航栏 -->
+<div class="xiaodaohang">
+        <div class="xdh-r">
+            <span class="iconfont">&#xe60d;</span>
+            <!-- 图标 -->
+            <span class="xdh-text" onclick="window.location.href='/href/hrefs/gonggaoguanli.html'">公告管理</span>
+            <span class="xdh-text" onclick="window.location.href='/href/gonggao.html'">发布公告</span>
+            <!-- 文字-添加点击事件 -->
+        </div>
+
+</div>
+     
+<!-- 左边导航 -->
+<div class="shutiao">
+        <div class="st-top">
+            <img src="/gongyong-img/figure.jpg" alt="">
+            <div class="search"> 
+                <!-- 搜索框 -->
+                <input type="text">
+                <button class="iconfont">&#xe8d6;</button>
+            </div>
+        </div>
+
+        <div class="st-tottom">
+                                    <!-- id 被选中 -->
+            <li class="liebiao" onclick="window.location.href='/href/geren.html'">
+                <span> 
+                    <span class="iconfont">&#xeb53;</span>个人中心
+                </span>
+                <ul>
+                    <li></li>
+                </ul>
+            </li>
+
+            <li class="liebiao" onclick="window.location.href='/href/yuagong.html'">
+                <span>
+                    <span class="iconfont">&#xe600;</span>员工管理
+                </span>
+                <ul>
+                    <li></li>
+                </ul>
+            </li>
+
+            <li class="liebiao" onclick="window.location.href='/href/gongyingshang.html'">
+                <span>
+                    <span class="iconfont">&#xe88d;</span>供应商管理
+                </span>
+                <ul>
+                    <li></li>
+                </ul>
+            </li>
+
+            <li class="liebiao" onclick="window.location.href='/href/fenlei.html'">
+                <span>
+                    <span class="iconfont">&#xe65c;</span>商品分类管理
+                </span>
+                <ul>
+                    <li></li>
+                </ul>
+            </li>
+            <li class="liebiao" onclick="window.location.href='/href/caigo.html'">
+                <span>
+                    <span class="iconfont">&#xe607;</span> 货物采购管理
+                </span>
+                <ul>
+
+                    <li></li>
+                </ul>
+            </li>
+
+            <li class="liebiao" onclick="window.location.href='/href/xingxi.html'">
+                <span>
+                    <span class="iconfont">&#xeb51;</span> 商品信息管理
+                </span>
+                <ul>
+                    <li></li>
+                </ul>
+            </li>
+
+            <li class="liebiao" onclick="window.location.href='/href/ruku.html'">
+                <span>
+                    <span class="iconfont">&#xeacb;</span> 商品入库管理
+                </span>
+                <ul>
+                    <li></li>
+                </ul>
+            </li>
+
+            <li class="liebiao" onclick="window.location.href='/href/chuku.html'">
+                <span>
+                    <span class="iconfont">&#xeaca;</span> 商品出库管理
+                </span>
+                <ul>
+                    <li></li>
+                </ul>
+            </li>
+
+            <li class="liebiao" onclick="window.location.href='/href/kefu.html'">
+                <span>
+                    <span class="iconfont">&#xeb53;</span> 在线沟通管理
+                </span>
+                <ul>
+                    <li></li>
+                </ul>
+            </li>
+
+            <li class="liebiao" onclick="window.location.href='/href/pandian.html'">
+                <span>
+                    <span class="iconfont">&#xe640;</span> 货物盘点管理
+                </span>
+                <ul>
+                    <li></li>
+                </ul>
+            </li>
+
+            <li class="liebiao" id="baixuanzhong" onclick="window.location.href='/href/gonggao.html'">
+                <span>
+                    <span class="iconfont">&#xe65b;</span> 公告信息管理
+                </span>
+                <ul>
+                    <li></li>
+                </ul>
+            </li>
+
+            <li class="liebiao" onclick="window.location.href='/href/gongyingshanghuowu.html'">
+                <span>
+                    <span class="iconfont">&#xeac8;</span> 供应商货物管理
+                </span>
+                <ul>
+                    <li></li>
+                </ul>
+            </li>
+        </div>
+
+
+    
+</div>
+
+<div class="function2">
+    <ul class="sp-name">
+        <li class="sp-inpt">
+            <label for="" id="lab">公告标题：</label>
+            <input type="text" id="datepicker" style="padding-left: 8px; font-size: 17px; width: 140px; height: 35px;">
+            <button id="xingxi-btn1">查询</button>
+            <button id="xingxi-btn2">添加</button>
+            <!-- 按钮信息 -->
+            <button id="xingxi-btn4">批量删除</button>
+        </li>
+    </ul>
+
+
+    <!-- 商品信息 -->
+    <div class="food" >
+        <!-- 表单 -->
+        <ul class="orderbox">
+            <li class="da-biao">
+                <table class="tab-da">
+                    <tbody>
+                        <tr>
+                            <td class="tab-da-btn">
+                                <input type="radio" name="" value="">
+                            </td>
+                            <td><p>公告标题</p></td>
+                            <td><p class="biao-img" >图片</p></td>
+                            <td><p>发布日期</p></td>
+                            <td><p class="content">内容</p></td>
+                            <td class="chaozhuo"><p>操作</p></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+
+
+        <ul class="orderbox">
+            <li class="xiao-top">
+                <table class="tab-xiao">
+                    <tbody>
+                        <tr>
+                            <td><input type="radio"></td>
+                            <td><p>卡西欧手表手表降价了</p></td>
+                            <td><img src="/img/1664870892163.jpg" alt=""></td>
+                            <td><p>2022年10月1日</p></td>
+                            <td><p>卡西欧手表手表降价了</p></td>
+                            <td><button id="xbtn-ck">查看</button></td>
+                            <td><button id="xbtn-xg">修改</button></td>
+                            <td><button id="xtbn-sc">删除</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+
+        <ul class="orderbox">
+            <li class="xiao-bottom">
+                <table class="tab-xiao">
+                    <tbody>
+                        <tr>
+                            <td><input type="radio"></td>
+                            <td><p>今晚韩式棒球服9.8折</p></td>
+                            <td><img src="/img/1664870910857.jpg" alt=""></td>
+                            <td><p>2022年10月1日</p></td>
+                            <td><p>今晚韩式棒球服9.8折</p></td>
+                            <td><button id="xbtn-ck">查看</button></td>
+                            <td><button id="xbtn-xg">修改</button></td>
+                            <td><button id="xtbn-sc">删除</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+
+        <ul class="orderbox">
+            <li class="xiao-top">
+                <table class="tab-xiao">
+                    <tbody>
+                        <tr>
+                            <td><input type="radio"></td>
+                            <td><p>收藏店铺领取无门槛券</p></td>
+                            <td><img src="/img/1664870928874.jpg" alt=""></td>
+                            <td><p>2022年10月1日</p></td>
+                            <td><p>收藏店铺领取无门槛券</p></td>
+                            <td><button id="xbtn-ck">查看</button></td>
+                            <td><button id="xbtn-xg">修改</button></td>
+                            <td><button id="xtbn-sc">删除</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+
+</body>
+</html>

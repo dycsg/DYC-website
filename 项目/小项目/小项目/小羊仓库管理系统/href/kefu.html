@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/gongyong-img/logo.ico">
+    <link rel="stylesheet" href="/style/index.css">
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="40d5e7e3-7b89-462a-9673-d4c6242944ab";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+    <title>在线沟通管理</title>
+</head>
+<body>
+<!-- 固定导航 -->
+<div class="hentiao">
+    <h2>仓库管理</h2>
+    <span class="ht-btn">
+        <button>
+            <span class="iconfont">&#xeacc;</span>
+            <p>刷新</p>
+        </button>
+        <!-- 刷新 -->
+        <button>
+            <span class="iconfont">&#xe601;</span>
+            <p>菜单</p>
+        </button>
+        <!-- 菜单 -->
+        <button onclick="window.location.href='/index.html'">
+            <span class="iconfont">&#xe602;</span>
+            <p>退出</p>
+        </button>
+        <!-- 退出 -->
+    </span>
+</div>
+
+<!-- 小导航栏 -->
+<div class="xiaodaohang">
+<div class="xdh-r">
+<span class="iconfont">&#xe88d;</span>
+<!-- 图标 -->
+<span class="xdh-text" onclick="window.location.href=''">在线客服</span>
+<!-- 文字-添加点击事件 -->
+</div>
+<p style="color: red;"><marquee behavior="" direction="">提示：点击右下角，没有显示的话需要等待一下</marquee></p>
+</div>
+
+<!-- 左边导航 -->
+<div class="shutiao">
+    <div class="st-top">
+        <img src="/gongyong-img/figure.jpg" alt="">
+        <div class="search"> 
+            <!-- 搜索框 -->
+            <input type="text">
+            <button class="iconfont">&#xe8d6;</button>
+        </div>
+    </div>
+
+    <div class="st-tottom">
+                                <!-- id 被选中 -->
+        <li class="liebiao" onclick="window.location.href='/href/geren.html'">
+            <span> 
+                <span class="iconfont">&#xeb53;</span>个人中心
+            </span>
+            <ul>
+                <li></li>
+            </ul>
+        </li>
+
+        <li class="liebiao" onclick="window.location.href='/href/yuagong.html'">
+            <span>
+                <span class="iconfont">&#xe600;</span>员工管理
+            </span>
+            <ul>
+                <li></li>
+            </ul>
+        </li>
+
+        <li class="liebiao" onclick="window.location.href='/href/gongyingshang.html'">
+            <span>
+                <span class="iconfont">&#xe88d;</span>供应商管理
+            </span>
+            <ul>
+                <li></li>
+            </ul>
+        </li>
+
+        <li class="liebiao" onclick="window.location.href='/href/fenlei.html'">
+            <span>
+                <span class="iconfont">&#xe65c;</span>商品分类管理
+            </span>
+            <ul>
+                <li></li>
+            </ul>
+        </li>
+        <li class="liebiao" onclick="window.location.href='/href/caigo.html'">
+            <span>
+                <span class="iconfont">&#xe607;</span> 货物采购管理
+            </span>
+            <ul>
+
+                <li></li>
+            </ul>
+        </li>
+
+        <li class="liebiao" onclick="window.location.href='/href/xingxi.html'">
+            <span>
+                <span class="iconfont">&#xeb51;</span> 商品信息管理
+            </span>
+            <ul>
+                <li></li>
+            </ul>
+        </li>
+
+        <li class="liebiao" onclick="window.location.href='/href/ruku.html'">
+            <span>
+                <span class="iconfont">&#xeacb;</span> 商品入库管理
+            </span>
+            <ul>
+                <li></li>
+            </ul>
+        </li>
+
+        <li class="liebiao" onclick="window.location.href='/href/chuku.html'">
+            <span>
+                <span class="iconfont">&#xeaca;</span> 商品出库管理
+            </span>
+            <ul>
+                <li></li>
+            </ul>
+        </li>
+
+        <li class="liebiao" id="baixuanzhong" onclick="window.location.href='/href/kefu.html'">
+            <span>
+                <span class="iconfont">&#xeb53;</span> 在线沟通管理
+            </span>
+            <ul>
+                <li></li>
+            </ul>
+        </li>
+
+        <li class="liebiao" onclick="window.location.href='/href/pandian.html'">
+            <span>
+                <span class="iconfont">&#xe640;</span> 货物盘点管理
+            </span>
+            <ul>
+                <li></li>
+            </ul>
+        </li>
+
+        <li class="liebiao" onclick="window.location.href='/href/gonggao.html'">
+            <span>
+                <span class="iconfont">&#xe65b;</span> 公告信息管理
+            </span>
+            <ul>
+                <li></li>
+            </ul>
+        </li>
+
+        <li class="liebiao" onclick="window.location.href='/href/gongyingshanghuowu.html'">
+            <span>
+                <span class="iconfont">&#xeac8;</span> 供应商货物管理
+            </span>
+            <ul>
+                <li></li>
+            </ul>
+        </li>
+    </div>
+</div>
+
+<!-- 功能部分 -->
+<div class="function">
+
+</div>
+
+<!-- 弹窗公告开始-->
+<script src="https://cdn.bootcss.com/sweetalert/2.1.0/sweetalert.min.js"></script>
+<script>
+    swal('小羊','提示：点击右下角，没有显示的话需要等待一下\n\n','success');
+</script>
+<!-- 弹窗公告结束-->
+</body>
+</html>

@@ -1,0 +1,133 @@
+.function1{
+    min-height: 100vh;
+    /* background-image: linear-gradient(to right bottom ,#47e791 ,rgba(160, 81, 100, 0.4) ,#f589); */
+    box-sizing: border-box;
+    background-color: #dfe8f2;
+    padding: 12px 12px;
+    margin-top: 40px;
+    margin-left: 190px;
+}
+.sp-name{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding-left: 2px;
+}
+.sp-inpt{
+    display: flex;
+    padding-bottom: 15px;
+    padding-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.sp-inpt label{
+    padding-left: 8px;
+    color: #ff8400;
+}
+.sp-inpt button{
+    color: #fff;
+    cursor: pointer;
+    padding: 7px;
+    margin-left: 40px;
+    font-size: 16px;
+}
+#xingxi-btn1{
+    background-color: green;
+    border: 2px solid  rgb(132, 224, 82);
+}
+#xingxi-btn2{
+    background-color: rgb(226, 109, 109);
+    border: 2px solid  rgb(235, 135, 135);
+}
+#xingxi-btn3{
+    background-color: rgb(27, 92, 212);
+    border: 2px solid  rgb(61, 89, 199);
+}
+#xingxi-btn4{
+    background-color: rgb(19, 139, 213);
+    border: 2px solid  rgb(33, 171, 221);
+}
+.sp-inpt button:hover{
+    transform: scale(0.92);
+}
+
+/* 商品信息 */
+.food{
+    border: 1px solid #00695a;
+    z-index: 0;
+}
+.orderbox{
+    width: 100%;
+    margin: 0 auto;
+}
+.orderbox .da-biao{
+    background: #00695a;
+    box-shadow: 0 3px 3px rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid #00695a;
+}
+.orderbox .xiao-top{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+tr td img{
+    width: 65px;
+    height: 65px;
+    border-radius: 3px;
+    
+}
+.orderbox .tab-da{
+    width: 100%;
+}
+.orderbox .tab-xiao{
+    width: 100%;
+}
+.orderbox .tab-da .chaozhuo{
+    width: 20%;
+}
+
+.orderbox td{
+    text-align: center;
+    padding: 4px;
+}
+.pingpai{
+    width: 15%;
+    /* 多出来的备注不换行变省略号 */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.orderbox button{
+    width: 40px;
+    height: 25px;
+    margin: -3px;
+    cursor: pointer;
+    color: #fff;
+}
+#xbtn-ck{
+    background-color: green;
+    border: 2px solid  rgb(132, 224, 82);
+}
+#xbtn-xg{
+    background-color: rgb(226, 109, 109);
+    border: 2px solid  rgb(235, 135, 135);
+}
+#xtbn-sc{
+    background-color: rgb(19, 139, 213);
+    border: 2px solid  rgb(33, 171, 221);
+}
+.orderbox button:hover{
+    transform: scale(1.2);
+    color: #ff8400;
+}
+
+/* 分页器 */
+.barcon1 {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    /* 这里修改分页器位置 */
+    left: -150px;
+    top: 900px;
+    text-align: center;
+}
