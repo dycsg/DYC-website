@@ -1,0 +1,183 @@
+
+/*调整页面布局*/
+
+/*统一设置页面样式*/
+body{
+	/*字体样式   大小和名称*/
+	font:12px "仿宋","黑体",sans-serif;
+	color: #9a9a9a;
+}
+
+	/*清除默认样式*/
+body,h1,h2,h3,h4,h5,h6,p,ol,ul{
+	margin: 0;
+	padding:0;
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #9a9a9a;
+}
+a:hover{
+	color: #64A131;
+}
+	/*设置照片的垂直对齐方式*/
+img{
+	vertical-align: bottom;
+}
+
+
+/*宽度设置及居中效果*/
+#container{
+	width: 990px;
+	margin: 0 auto;
+}
+/*导航部分样式*/
+#nav{
+	height: 30px;
+	background: #eee;
+	line-height: 30px;
+}
+/*右侧导航*/
+#nav .rightNav{
+	float: right;
+}
+#nav .rightNav>li{
+	float: left;
+	padding: 0 5px;
+}
+#nav .rightNav>li>b{
+	border-left: 1px solid #9a9a9a;
+	margin-right: 5px;
+}
+
+/*左侧导航*/
+#nav .leftNav>li{
+	float: left;
+	padding-left: 10px;
+}
+#nav .leftNav>li>u{
+	/*左侧导航的三角标*/
+/*	width: 0;
+	height: 0;
+	border-top: 7px solid #999999;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-bottom: 7px solid transparent;
+	float: right;
+	margin-top: 12px;
+	margin-left: 7px;*/
+
+	/*或者*/
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border: 7px solid transparent;
+	border-top: 7px solid #999999;
+	position: relative;
+	top:4px;
+}
+
+#nav .address{
+	/*用于使下拉列表实现绝对定位*/
+	position: relative;
+}
+#nav .select{
+	/*将下拉列表隐藏*/
+	display: none;
+	/*使用绝对定位使下拉列表时不占位*/
+	position: absolute;
+	/*调整堆叠次序，使下拉菜单在上方显示*/
+	z-index: 100;
+	color: #272822;
+}
+
+#nav .address:hover .select{
+	/*用于显示隐藏的下拉列表*/
+	display: block;
+}
+
+/*2.横幅*/
+#banner{
+	margin: 15px 0;
+}
+#banner img{
+	/*调整图片尺寸*/
+	width: 100%;
+	height: 207px;
+}
+
+/*3.今日推荐*/
+#adv{
+	height: 112px;
+}
+#adv img{
+	float: left;
+	width: 240px;
+	margin-right: 10px;
+}
+#adv .lastImg{
+	margin-right: 0;
+}
+
+/*4.主体信息*/
+#main{
+	margin-top: 25px;
+}
+#main .goodsClass{
+	border-top: 1px solid #ccc;
+	padding-top: 15px;
+	margin-bottom: 10px;
+}
+#main .goodsClass>a{
+	/*上方生活卡券部分布局*/
+	float: right;
+	margin-top: 15px;
+	font: 16px "宋体";
+	color: #333333;
+}
+/*商品信息部分*/
+#main .item>ul>li{
+	float: left;
+	width: 190px;
+	margin-right: 10px;
+}
+#main .item>ul>li.no-margin{
+	margin:0;
+}
+
+#main .item>ul>li>p{
+	/*做溢出处理  使图片放大时不占其他元素*/
+	width: 190px;
+	height: 190px;
+	overflow: hidden;
+}
+#main .item>ul>li>p>img{
+	width: 190px;
+	/*添加过渡属性*/
+	transition: all 0.3s;
+}
+#main .item>ul>li>p>img:hover{
+	/*设置鼠标移到对应图片上有放大效果*/
+	transform: scale(1.1);
+}
+
+
+#main .content>a{
+	/*购物框位置移动*/
+	float: right;
+}
+	/*调整购物框下方布局*/
+#main .content{
+	margin-top: 10px;
+}
+#main .content>p{
+	color: #555;
+	font:16px '宋体'; 
+	margin-bottom: 3px;
+	margin-left: 3px;
+}
+#main .content>span{
+	margin-left: 3px;
+	font:16px '宋体'; 
+}
