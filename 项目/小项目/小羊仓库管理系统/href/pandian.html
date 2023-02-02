@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/gongyong-img/logo.ico">
+    <link rel="stylesheet" href="/style/index.css">
+    <link rel="stylesheet" href="/style/pandian.css">
+    <script src="https://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
+    <script src="https://cdn.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+    <script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+    <script src="https://cdn.highcharts.com.cn/highcharts/themes/dark-unica.js"></script>
+    <title>货物盘点管理</title>
+</head>
+<body>
+    <!-- 固定导航 -->
+<div class="hentiao">
+        <h2>仓库管理</h2>
+        <span class="ht-btn">
+            <button>
+                <span class="iconfont">&#xeacc;</span>
+                <p>刷新</p>
+            </button>
+            <!-- 刷新 -->
+            <button>
+                <span class="iconfont">&#xe601;</span>
+                <p>菜单</p>
+            </button>
+            <!-- 菜单 -->
+            <button onclick="window.location.href='/index.html'">
+                <span class="iconfont">&#xe602;</span>
+                <p>退出</p>
+            </button>
+            <!-- 退出 -->
+        </span>
+</div>
+    
+<!-- 小导航栏 -->
+<div class="xiaodaohang">
+    <div class="xdh-r">
+    <span class="iconfont">&#xe88d;</span>
+    <!-- 图标 -->
+    <span class="xdh-text" onclick="window.location.href=''">盘点</span>
+    <!-- 文字-添加点击事件 -->
+    </div>
+    <!-- <p style="color: red;"><marquee behavior="" direction="">提示：点击右下角，没有显示的话需要等待一下</marquee></p> -->
+</div>
+    
+    <!-- 左边导航 -->
+<div class="shutiao">
+        <div class="st-top">
+            <img src="/gongyong-img/figure.jpg" alt="">
+            <div class="search"> 
+                <!-- 搜索框 -->
+                <input type="text">
+                <button class="iconfont">&#xe8d6;</button>
+            </div>
+        </div>
+    
+        <div class="st-tottom">
+                                    <!-- id 被选中 -->
+            <li class="liebiao" onclick="window.location.href='/href/geren.html'">
+                <span> 
+                    <span class="iconfont">&#xeb53;</span>个人中心
+                </span>
+                <ul>
+                    <li></li>
+                </ul>
+            </li>
+    
+            <li class="liebiao" onclick="window.location.href='/href/yuagong.html'">
+                <span>
+                    <span class="iconfont">&#xe600;</span>员工管理
+                </span>
+                <ul>
+                    <li></li>
+                </ul>
+            </li>
+    
+            <li class="liebiao" onclick="window.location.href='/href/gongyingshang.html'">
+                <span>
+                    <span class="iconfont">&#xe88d;</span>供应商管理
+                </span>
+                <ul>
+                    <li></li>
+                </ul>
+            </li>
+    
+            <li class="liebiao" onclick="window.location.href='/href/fenlei.html'">
+                <span>
+                    <span class="iconfont">&#xe65c;</span>商品分类管理
+                </span>
+                <ul>
+                    <li></li>
+                </ul>
+            </li>
+            <li class="liebiao" onclick="window.location.href='/href/caigo.html'">
+                <span>
+                    <span class="iconfont">&#xe607;</span> 货物采购管理
+                </span>
+                <ul>
+    
+                    <li></li>
+                </ul>
+            </li>
+    
+            <li class="liebiao" onclick="window.location.href='/href/xingxi.html'">
+                <span>
+                    <span class="iconfont">&#xeb51;</span> 商品信息管理
+                </span>
+                <ul>
+                    <li></li>
+                </ul>
+            </li>
+    
+            <li class="liebiao" onclick="window.location.href='/href/ruku.html'">
+                <span>
+                    <span class="iconfont">&#xeacb;</span> 商品入库管理
+                </span>
+                <ul>
+                    <li></li>
+                </ul>
+            </li>
+    
+            <li class="liebiao" onclick="window.location.href='/href/chuku.html'">
+                <span>
+                    <span class="iconfont">&#xeaca;</span> 商品出库管理
+                </span>
+                <ul>
+                    <li></li>
+                </ul>
+            </li>
+    
+            <li class="liebiao" onclick="window.location.href='/href/kefu.html'">
+                <span>
+                    <span class="iconfont">&#xeb53;</span> 在线沟通管理
+                </span>
+                <ul>
+                    <li></li>
+                </ul>
+            </li>
+    
+            <li class="liebiao" id="baixuanzhong" onclick="window.location.href='/href/pandian.html'">
+                <span>
+                    <span class="iconfont">&#xe640;</span> 货物盘点管理
+                </span>
+                <ul>
+                    <li></li>
+                </ul>
+            </li>
+    
+            <li class="liebiao" onclick="window.location.href='/href/gonggao.html'">
+                <span>
+                    <span class="iconfont">&#xe65b;</span> 公告信息管理
+                </span>
+                <ul>
+                    <li></li>
+                </ul>
+            </li>
+    
+            <li class="liebiao" onclick="window.location.href='/href/gongyingshanghuowu.html'">
+                <span>
+                    <span class="iconfont">&#xeac8;</span> 供应商货物管理
+                </span>
+                <ul>
+                    <li></li>
+                </ul>
+            </li>
+        </div>
+</div>
+    
+    <!-- 功能部分 -->
+<div class="function7">
+       <!-- 动态图 -->
+       <div class="cjrst">
+        <div id="containers" style="min-width:400px;height:400px"></div>
+    </div>
+    <div class="functions">
+       
+        <input type="radio" id="europa" name="continente" checked='checked' />
+        <input type="radio" id="america" name="continente" />
+        <input type="radio" id="asia" name="continente" />
+
+        <!-- Europa -->
+        <input type="radio" id="espana" name="pais" checked='checked' />
+        <input type="radio" id="italia" name="pais" />
+        <input type="radio" id="grecia" name="pais" />
+        <input type="radio" id="alemania" name="pais" />
+
+        <!-- America -->
+        <input type="radio" id="argentina" name="pais" />
+        <input type="radio" id="peru" name="pais" />
+        <input type="radio" id="mexico" name="pais" />
+        <input type="radio" id="eeuu" name="pais" />
+
+        <!-- Asia -->
+        <input type="radio" id="japon" name="pais" />
+        <input type="radio" id="filipinas" name="pais" />
+        <input type="radio" id="china" name="pais" />
+        <input type="radio" id="malasia" name="pais" />
+
+        <section>
+        <h1 class="entypo-address">Double checked</h1>
+        <!-- labels continentes y grupos paises -->
+        <nav class='continente'>
+            <label for="europa" class="entypo-air">Europa</label>
+            <label for="america" class="entypo-calendar">America</label>
+            <label for="asia" class="entypo-instagrem">Asia</label>
+        </nav>
+            <nav class='paises eu'>
+            <label for="espana" class="entypo-chart-bar">España</label>
+            <label for="italia" class="entypo-chart-line">Italia</label>
+            <label for="grecia" class="entypo-chart-area">Grecia</label>
+            <label for="alemania" class="entypo-chart-pie">Alemania</label>
+            </nav>
+        
+            <nav class='paises am'>
+            <label for="argentina" class="entypo-rss">Argentina</label>
+            <label for="peru" class="entypo-shareable">Peru</label>
+            <label for="mexico" class="entypo-shuffle">Mexico</label>
+            <label for="eeuu" class="entypo-signal">EE.UU.</label>
+            </nav>
+        
+            <nav class='paises as'>
+            <label for="japon" class="entypo-flow-branch">Japón</label>
+            <label for="filipinas" class="entypo-flow-cascade">Filipinas</label>
+            <label for="china" class="entypo-flow-tree">China</label>
+            <label for="malasia" class="entypo-flow-parallel">Malasia</label>
+            </nav>
+        <div>  
+        <article class='europa'>
+            <div class='pais espana'>
+        <table>
+   
+        <tbody>
+            <tr>
+                <td>La visitaré por su gente</td>
+                <td><span class='uno' data-valor='65'></span></td>
+                <td>345</td>
+            </tr>
+            <tr>
+                <td>Iría por su comida</td>
+                <td><span class='dos' data-valor='73'></span></td>
+                <td>456</td>
+            </tr>
+            <tr>
+                <td>La fiesta me llama</td>
+                <td><span class='tres' data-valor='99'></span></td>
+                <td>980</td>
+            </tr>
+            <tr>
+                <td>Sol y playa me pierde</td>
+                <td><span class='cuatro' data-valor='53'></span></td>
+                <td>666</td>
+            </tr>
+            <tr>
+                <td>Sus montañas son mi hogar</td>
+                <td><span class='cinco' data-valor='37'></span></td>
+                <td>259</td>
+            </tr>
+        </tbody>
+        </table>      
+            </div>
+            
+            <div class='pais italia'>
+        <table>
+
+        <tbody>
+            <tr>
+                <td>La visitaré por su gente</td>
+                <td><span class='uno' data-valor='65'></span></td>
+                <td>345</td>
+            </tr>
+            <tr>
+                <td>Iría por su comida</td>
+                <td><span class='dos' data-valor='73'></span></td>
+                <td>456</td>
+            </tr>
+            <tr>
+                <td>La noche y la fiesta me llaman</td>
+                <td><span class='tres' data-valor='99'></span></td>
+                <td>980</td>
+            </tr>
+            <tr>
+                <td>El sol y sus playas me pierden</td>
+                <td><span class='cuatro' data-valor='53'></span></td>
+                <td>666</td>
+            </tr>
+            <tr>
+                <td>Sus montañas son mi hogar</td>
+                <td><span class='cinco' data-valor='37'></span></td>
+                <td>259</td>
+            </tr>
+        </tbody>
+        </table>      
+            </div>
+            
+            <div class='pais grecia'>
+        <table>
+
+        <tbody>
+            <tr>
+                <td>La visitaré por su gente</td>
+                <td><span class='uno' data-valor='65'></span></td>
+                <td>345</td>
+            </tr>
+            <tr>
+                <td>Iría por su comida</td>
+                <td><span class='dos' data-valor='73'></span></td>
+                <td>456</td>
+            </tr>
+            <tr>
+                <td>La noche y la fiesta me llaman</td>
+                <td><span class='tres' data-valor='99'></span></td>
+                <td>980</td>
+            </tr>
+            <tr>
+                <td>El sol y sus playas me pierden</td>
+                <td><span class='cuatro' data-valor='53'></span></td>
+                <td>666</td>
+            </tr>
+            <tr>
+                <td>Sus montañas son mi hogar</td>
+                <td><span class='cinco' data-valor='37'></span></td>
+                <td>259</td>
+            </tr>
+        </tbody>
+        </table>      
+            </div>
+            
+            <div class='pais alemania'>
+        <table>
+
+        <tbody>
+            <tr>
+                <td>La visitaré por su gente</td>
+                <td><span class='uno' data-valor='65'></span></td>
+                <td>345</td>
+            </tr>
+            <tr>
+                <td>Iría por su comida</td>
+                <td><span class='dos' data-valor='73'></span></td>
+                <td>456</td>
+            </tr>
+            <tr>
+                <td>La noche y la fiesta me llaman</td>
+                <td><span class='tres' data-valor='99'></span></td>
+                <td>980</td>
+            </tr>
+            <tr>
+                <td>El sol y sus playas me pierden</td>
+                <td><span class='cuatro' data-valor='53'></span></td>
+                <td>666</td>
+            </tr>
+            <tr>
+                <td>Sus montañas son mi hogar</td>
+                <td><span class='cinco' data-valor='37'></span></td>
+                <td>259</td>
+            </tr>
+        </tbody>
+        </table>      
+            </div>
+        </article>
+        
+        <article class='america'>
+            <div class='pais argentina'>
+            <img alt='' src='https://4.bp.blogspot.com/-K5zec53PX2k/UrOmNoYza6I/AAAAAAAAAeU/Nc5i0G71N2A/s1600/bandera2.png'>
+            </div>
+            <div class='pais peru'>
+            <img alt='' src='http://www.mceconsultoresasociados.com/ps13/peru.jpg'>
+            </div>
+            <div class='pais mexico'>
+            <img alt='' src='http://fernandortizg.files.wordpress.com/2012/09/bandera-de-mexico.jpg'>
+            </div>
+            <div class='pais eeuu'>
+            <img alt='' src='http://www.computerworld.es/archivos/201211/bandera_eeuu_hi.png'>
+            </div>
+        </article>
+        
+            <article class='asia'>
+                <div class='pais japon'>
+                <img alt='' src='http://www.lovethesepics.com/wp-content/uploads/2012/09/Japan-Fujiyoshida-and-Mount-Fuji.jpg'>
+                </div>
+                <div class='pais filipinas'>
+                <img alt='' src='http://img01.lavanguardia.com/2010/12/07/Filipinas_54083687758_600_226.jpg'>
+                </div>
+                <div class='pais china'>
+                <img alt='' src='http://www.jaimelago.org/sites/default/files/u1/china.jpg'>
+                </div>
+                <div class='pais malasia'>
+                <img alt='' src='https://3.bp.blogspot.com/-wE_Jh3dv8jI/UzROlo7XU3I/AAAAAAAABJw/0Z_0YgOFmn4/s800/Shwedagon+Pagoda-007.jpg'>
+                </div>
+            </article>
+            </div>
+        </section>
+             
+        
+    </div>  
+ 
+</div>
+
+
+<script>
+    //动态图
+    Highcharts.setOptions({
+		global: {
+				useUTC: false
+		}
+});
+function activeLastPointToolip(chart) {
+		var points = chart.series[0].points;
+		chart.tooltip.refresh(points[points.length -1]);
+}
+var chart = Highcharts.chart('containers', {
+		chart: {
+				type: 'spline',
+				marginRight: 10,
+				events: {
+						load: function () {
+								var series = this.series[0],
+										chart = this;
+								activeLastPointToolip(chart);
+								setInterval(function () {
+										var x = (new Date()).getTime(), // 当前时间
+												y = Math.random();          // 随机值
+										series.addPoint([x, y], true, true);
+										activeLastPointToolip(chart);
+								}, 1000);
+						}
+				}
+		},
+		title: {
+				text: '动态货物实时数据'
+		},
+		xAxis: {
+				type: 'datetime',
+				tickPixelInterval: 150
+		},
+		yAxis: {
+				title: {
+						text: null
+				}
+		},
+		tooltip: {
+				formatter: function () {
+						return '<b>' + this.series.name + '</b><br/>' +
+								Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) + '<br/>' +
+								Highcharts.numberFormat(this.y, 2);
+				}
+		},
+		legend: {
+				enabled: false
+		},
+		series: [{
+				name: '货物数据',
+				data: (function () {
+						// 生成随机值
+						var data = [],
+								time = (new Date()).getTime(),
+								i;
+						for (i = -19; i <= 0; i += 1) {
+								data.push({
+										x: time + i * 1000,
+										y: Math.random()
+								});
+						}
+						return data;
+				}())
+		}]
+});
+</script>
+</body>
+</html>

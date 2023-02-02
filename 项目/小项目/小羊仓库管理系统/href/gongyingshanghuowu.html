@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/gongyong-img/logo.ico">
+    <link rel="stylesheet" href="/style/index.css">
+    <link rel="stylesheet" href="/style/gongyingshanghuowu.css">
+    <script src="https://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
+    <script src="https://cdn.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+    <script src="https://cdn.highcharts.com.cn/highcharts/modules/bullet.js"></script>
+    <script src="https://cdn.highcharts.com.cn/highcharts/themes/dark-unica.js"></script>
+
+    <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.min.js"></script>
+    <title>供应商货物管理</title>
+</head>
+
+<body>
+    <!-- 固定导航 -->
+    <div class="hentiao">
+        <h2>仓库管理</h2>
+        <span class="ht-btn">
+            <button>
+                <span class="iconfont">&#xeacc;</span>
+                <p>刷新</p>
+            </button>
+            <!-- 刷新 -->
+            <button>
+                <span class="iconfont">&#xe601;</span>
+                <p>菜单</p>
+            </button>
+            <!-- 菜单 -->
+            <button onclick="window.location.href='/index.html'">
+                <span class="iconfont">&#xe602;</span>
+                <p>退出</p>
+            </button>
+            <!-- 退出 -->
+        </span>
+    </div>
+
+    <!-- 小导航栏 -->
+    <div class="xiaodaohang">
+        <div class="xdh-r">
+            <span class="iconfont">&#xe88d;</span>
+            <!-- 图标 -->
+            <span class="xdh-text" onclick="window.location.href=''">供应商货物</span>
+            <!-- 文字-添加点击事件 -->
+        </div>
+        <!-- <p style="color: red;"><marquee behavior="" direction="">提示：点击右下角，没有显示的话需要等待一下</marquee></p> -->
+    </div>
+
+    <!-- 左边导航 -->
+    <div class="shutiao">
+        <div class="st-top">
+            <img src="/gongyong-img/figure.jpg" alt="">
+            <div class="search">
+                <!-- 搜索框 -->
+                <input type="text">
+                <button class="iconfont">&#xe8d6;</button>
+            </div>
+        </div>
+
+        <div class="st-tottom">
+            <!-- id 被选中 -->
+            <li class="liebiao" onclick="window.location.href='/href/geren.html'">
+                <span>
+                    <span class="iconfont">&#xeb53;</span>个人中心
+                </span>
+                <ul>
+                    <li></li>
+                </ul>
+            </li>
+
+            <li class="liebiao" onclick="window.location.href='/href/yuagong.html'">
+                <span>
+                    <span class="iconfont">&#xe600;</span>员工管理
+                </span>
+                <ul>
+                    <li></li>
+                </ul>
+            </li>
+
+            <li class="liebiao" onclick="window.location.href='/href/gongyingshang.html'">
+                <span>
+                    <span class="iconfont">&#xe88d;</span>供应商管理
+                </span>
+                <ul>
+                    <li></li>
+                </ul>
+            </li>
+
+            <li class="liebiao" onclick="window.location.href='/href/fenlei.html'">
+                <span>
+                    <span class="iconfont">&#xe65c;</span>商品分类管理
+                </span>
+                <ul>
+                    <li></li>
+                </ul>
+            </li>
+            <li class="liebiao" onclick="window.location.href='/href/caigo.html'">
+                <span>
+                    <span class="iconfont">&#xe607;</span> 货物采购管理
+                </span>
+                <ul>
+
+                    <li></li>
+                </ul>
+            </li>
+
+            <li class="liebiao" onclick="window.location.href='/href/xingxi.html'">
+                <span>
+                    <span class="iconfont">&#xeb51;</span> 商品信息管理
+                </span>
+                <ul>
+                    <li></li>
+                </ul>
+            </li>
+
+            <li class="liebiao" onclick="window.location.href='/href/ruku.html'">
+                <span>
+                    <span class="iconfont">&#xeacb;</span> 商品入库管理
+                </span>
+                <ul>
+                    <li></li>
+                </ul>
+            </li>
+
+            <li class="liebiao" onclick="window.location.href='/href/chuku.html'">
+                <span>
+                    <span class="iconfont">&#xeaca;</span> 商品出库管理
+                </span>
+                <ul>
+                    <li></li>
+                </ul>
+            </li>
+
+            <li class="liebiao" onclick="window.location.href='/href/kefu.html'">
+                <span>
+                    <span class="iconfont">&#xeb53;</span> 在线沟通管理
+                </span>
+                <ul>
+                    <li></li>
+                </ul>
+            </li>
+
+            <li class="liebiao" onclick="window.location.href='/href/pandian.html'">
+                <span>
+                    <span class="iconfont">&#xe640;</span> 货物盘点管理
+                </span>
+                <ul>
+                    <li></li>
+                </ul>
+            </li>
+
+            <li class="liebiao" onclick="window.location.href='/href/gonggao.html'">
+                <span>
+                    <span class="iconfont">&#xe65b;</span> 公告信息管理
+                </span>
+                <ul>
+                    <li></li>
+                </ul>
+            </li>
+
+            <li class="liebiao" id="baixuanzhong" onclick="window.location.href='/href/gongyingshanghuowu.html'">
+                <span>
+                    <span class="iconfont">&#xeac8;</span> 供应商货物管理
+                </span>
+                <ul>
+                    <li></li>
+                </ul>
+            </li>
+        </div>
+    </div>
+
+    <!-- 功能部分 -->
+    <div class="function8">
+        <div class="gyshwtab">
+            <div id="container1"></div>
+            <div id="container2"></div>
+            <div id="container3"></div>
+        </div>
+        <div class="gyshwtabs">
+            <div id="container"></div>
+        </div>
+    </div>
+
+    <!-- 1表 -->
+    <script>
+        window.onload = function () {
+            Highcharts.setOptions({
+                chart: {
+                    inverted: true,
+                    marginLeft: 135,
+                    type: 'bullet'
+                },
+                title: {
+                    text: null
+                },
+                legend: {
+                    enabled: false
+                },
+                yAxis: {
+                    gridLineWidth: 0
+                },
+                plotOptions: {
+                    series: {
+                        pointPadding: 0.25,
+                        borderWidth: 0,
+                        color: '#000',
+                        targetOptions: {
+                            width: '200%'
+                        }
+                    }
+                },
+                credits: {
+                    enabled: false
+                },
+                exporting: {
+                    enabled: false
+                }
+            });
+            Highcharts.chart('container1', {
+                chart: {
+                    marginTop: 40
+                },
+                title: {
+                    text: '2022 年公司运营情况'
+                },
+                xAxis: {
+                    categories: ['<span class="hc-cat-title">营收</span><br/> 千美元']
+                },
+                yAxis: {
+                    plotBands: [{
+                        from: 0,
+                        to: 150,
+                        color: '#666'
+                    }, {
+                        from: 150,
+                        to: 225,
+                        color: '#999'
+                    }, {
+                        from: 225,
+                        to: 9e9,
+                        color: '#bbb'
+                    }],
+                    title: null
+                },
+                series: [{
+                    data: [{
+                        y: 275,
+                        target: 250
+                    }]
+                }],
+                tooltip: {
+                    pointFormat: '<b>{point.y}</b> （目标值 {point.target}）'
+                }
+            });
+            Highcharts.chart('container2', {
+                xAxis: {
+                    categories: ['<span class="hc-cat-title">利润率</span><br/>%']
+                },
+                yAxis: {
+                    plotBands: [{
+                        from: 0,
+                        to: 20,
+                        color: '#666'
+                    }, {
+                        from: 20,
+                        to: 25,
+                        color: '#999'
+                    }, {
+                        from: 25,
+                        to: 100,
+                        color: '#bbb'
+                    }],
+                    labels: {
+                        format: '{value}%'
+                    },
+                    title: null
+                },
+                series: [{
+                    data: [{
+                        y: 22,
+                        target: 27
+                    }]
+                }],
+                tooltip: {
+                    pointFormat: '<b>{point.y}</b> （目标值 {point.target}）'
+                }
+            });
+            Highcharts.chart('container3', {
+                xAxis: {
+                    categories: ['<span class="hc-cat-title">新客户</span><br/>数量']
+                },
+                yAxis: {
+                    plotBands: [{
+                        from: 0,
+                        to: 1400,
+                        color: '#666'
+                    }, {
+                        from: 1400,
+                        to: 2000,
+                        color: '#999'
+                    }, {
+                        from: 2000,
+                        to: 9e9,
+                        color: '#bbb'
+                    }],
+                    labels: {
+                        format: '{value}'
+                    },
+                    title: null
+                },
+                series: [{
+                    data: [{
+                        y: 1650,
+                        target: 2100
+                    }]
+                }],
+                tooltip: {
+                    pointFormat: '<b>{point.y}</b> （目标值 {point.target}）'
+                },
+                credits: {
+                    enabled: true
+                }
+            });
+        }
+
+
+    </script>
+
+    <!-- 2表 -->
+    <script type="text/javascript">
+        var dom = document.getElementById('container');
+        var myChart = echarts.init(dom, null, {
+            renderer: 'canvas',
+            useDirtyRect: false
+        });
+        var app = {};
+
+        var option;
+
+        // Generate data
+        let category = [];
+        let dottedBase = +new Date();
+        let lineData = [];
+        let barData = [];
+        for (let i = 0; i < 20; i++) {
+            let date = new Date((dottedBase += 3600 * 24 * 1000));
+            category.push(
+                [date.getFullYear(), date.getMonth() + 1, date.getDate()].join('-')
+            );
+            let b = Math.random() * 200;
+            let d = Math.random() * 200;
+            barData.push(b);
+            lineData.push(d + b);
+        }
+        // option
+        option = {
+            backgroundColor: '#0f375f',
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'shadow'
+                }
+            },
+            legend: {
+                data: ['line', 'bar'],
+                textStyle: {
+                    color: '#ccc'
+                }
+            },
+            xAxis: {
+                data: category,
+                axisLine: {
+                    lineStyle: {
+                        color: '#ccc'
+                    }
+                }
+            },
+            yAxis: {
+                splitLine: { show: false },
+                axisLine: {
+                    lineStyle: {
+                        color: '#ccc'
+                    }
+                }
+            },
+            series: [
+                {
+                    name: 'line',
+                    type: 'line',
+                    smooth: true,
+                    showAllSymbol: true,
+                    symbol: 'emptyCircle',
+                    symbolSize: 15,
+                    data: lineData
+                },
+                {
+                    name: 'bar',
+                    type: 'bar',
+                    barWidth: 10,
+                    itemStyle: {
+                        borderRadius: 5,
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            { offset: 0, color: '#14c8d4' },
+                            { offset: 1, color: '#43eec6' }
+                        ])
+                    },
+                    data: barData
+                },
+                {
+                    name: 'line',
+                    type: 'bar',
+                    barGap: '-100%',
+                    barWidth: 10,
+                    itemStyle: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            { offset: 0, color: 'rgba(20,200,212,0.5)' },
+                            { offset: 0.2, color: 'rgba(20,200,212,0.2)' },
+                            { offset: 1, color: 'rgba(20,200,212,0)' }
+                        ])
+                    },
+                    z: -12,
+                    data: lineData
+                },
+                {
+                    name: 'dotted',
+                    type: 'pictorialBar',
+                    symbol: 'rect',
+                    itemStyle: {
+                        color: '#0f375f'
+                    },
+                    symbolRepeat: true,
+                    symbolSize: [12, 4],
+                    symbolMargin: 1,
+                    z: -10,
+                    data: lineData
+                }
+            ]
+        };
+
+        if (option && typeof option === 'object') {
+            myChart.setOption(option);
+        }
+
+        window.addEventListener('resize', myChart.resize);
+    </script>
+</body>
+
+</html>

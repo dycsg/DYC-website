@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .zhezhao{
+            position: fixed;
+            left: 0;
+            top: 0;
+            background: #000;
+            width: 100%;
+            height: 100%;
+            opacity: 0.5;
+        }
+        .tankuang{
+            position: relative;
+            background-color: #fff;
+            width: 50%;
+            height: 80%;
+            border-radius: 5px;
+            margin: 5% auto;
+            animation: donhua 1s;
+        }
+        @keyframes donhua {
+        0% {
+            transform:rotateX(80deg);
+        }
+        100% {
+            transform:rotateX(0deg);
+        }
+        }
+        #header{
+            height: 40px;
+            
+        }
+        #header img{
+            width: 100px;
+            height: 100px;
+        }
+        #header input{
+            width: 160px;
+            height: 45px;
+
+        }
+        #header-right{
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border-radius: 5px;
+            background-color: red;
+            color: #FFF;
+            right: 5px;
+            top: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" onclick="dianwo()">点击</button>
+    <div class="zhezhao" id="zhezhao">
+        <div class="tankuang">
+            <div id="header">
+                <span>我是弹窗</span>
+                <div><button></button></div>
+                <div><img src="./A9EE91122F19D9AE4225136DA2C611B5.png" alt=""></div>
+                <a href="./dw试用.html">dvfdss</a>
+                <input type="text" name="" id="">
+                <input type="" name="" id="">
+                <div id="header-right" onclick="hidder()">X</div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    document.getElementById("zhezhao").style.display="none";
+    function dianwo(){
+        document.getElementById("zhezhao").style.display="";
+    }
+    function hidder(){
+        document.getElementById("zhezhao").style.display="none";
+    }
+    // function hidder(){
+    //     document.getElementById("zhezhao").style.animation="donhua 1s";
+    // }
+
+    $(document).mouseup(function(e){
+        var _con = $("#zhezhao");
+        if(!_con.is(e.target) && _con.has(e.target).length === 0){
+            $("zhezhao").css("display","none");
+        }
+    })
+    </script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+.edit-da{
+    text-align: center;
+    display: flex;
+    justify-content: left;
+    border-bottom: 3px solid #708090;
+}
+.edit-xao{
+    display: flex;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+#lab{
+    padding-left: 15px;
+    font-size: 17px;
+    align-items: center;
+    justify-content: center;
+}
+#zhaopian{
+    cursor: pointer;
+}
+#xingming{
+    width: auto;
+    height: 35px;
+    padding-left: 5px;
+}
+#xingbie{
+    padding-left: 15px;
+    padding-top: 8px;
+    cursor: pointer;
+}
+
+/* 提交按钮 */
+.function button{
+    width: 100px;
+    height: 35px;
+    font-weight: 600;
+    font-size: 16px;
+    position: relative;
+    top: 100px;
+    left: 850px;
+}
+
+
+/* 提交弹窗 */
+:root {
+    --width: min(1000px, 80vw);
+  }
+  .page {
+    width: 100%;
+    transition: 0.6s;
+  }
+   .page button {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: rgb(19, 139, 213);
+    border: 2px solid  rgb(33, 171, 221);
+    transition: 0.3s;
+  }
+  
+  .page button:hover {
+    transform: scale(0.92);
+  }
+  
+  .page button:active {
+    filter: brightness(100%);
+  }
+  
+  /* 这里改弹窗样式  */
+  .modal {
+    position: fixed;
+    left: 60%;
+    top: 40%;
+    padding-left: 10px;
+    transform: translate(-50%, -40%);
+    background-color: #fff;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    display: none;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-name: shrink;
+  }
+  .active .modal {
+    display: block;
+    animation-name: expand;
+  }
+  
+  .modal-content {
+    width: var(--width);
+    padding-top: 10px;
+    margin: auto;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .modal-content h2 {
+    color: inherit;
+  }
+  
+  .active .modal-content {
+    overflow-y: auto;
+  }
+  
+  @keyframes expand {
+    0% {
+      width: 0;
+      max-height: 0;
+      color: transparent;
+    }
+    40% {
+      width: 6px;
+      color: transparent;
+    }
+    100% {
+      width: var(--width);
+      max-height: 100vh;
+      color: inherit;
+    }
+  }
+  
+  @keyframes shrink {
+    0% {
+      width: var(--width);
+      max-height: 100vh;
+      color: inherit;
+    }
+    60% {
+      width: 6px;
+      color: transparent;
+    }
+    100% {
+      width: 0;
+      max-height: 0;
+      color: transparent;
+    }
+  }

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/gongyong-img/logo.ico">
+    <link rel="stylesheet" href="/style/index.css">
+    <link rel="stylesheet" href="/javascript/index.js">
+    <link rel="stylesheet" href="/style/xingxi.css">
+    <!-- 分页器 -->
+    <!-- <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script> -->
+    <title>商品信息管理</title>
+</head>
+<body>
+    <!-- 固定导航 -->
+    <div class="hentiao">
+            <h2>仓库管理</h2>
+            <span class="ht-btn">
+                <button>
+                    <span class="iconfont">&#xeacc;</span>
+                    <p>刷新</p>
+                </button>
+                <!-- 刷新 -->
+                <button>
+                    <span class="iconfont">&#xe601;</span>
+                    <p>菜单</p>
+                </button>
+                <!-- 菜单 -->
+                <button onclick="window.location.href='/index.html'">
+                    <span class="iconfont">&#xe602;</span>
+                    <p>退出</p>
+                </button>
+                <!-- 退出 -->
+            </span>
+    </div>
+
+    <!-- 小导航栏 -->
+    <div class="xiaodaohang">
+            <div class="xdh-r">
+                <span class="iconfont">&#xe60d;</span>
+                <!-- 图标 -->
+                <span class="xdh-text" onclick="window.location.href=''">商品信息编辑</span>
+                <!-- 文字-添加点击事件 -->
+            </div>
+    
+    </div>
+         
+    <!-- 左边导航 -->
+    <div class="shutiao">
+            <div class="st-top">
+                <img src="/gongyong-img/figure.jpg" alt="">
+                <div class="search"> 
+                    <!-- 搜索框 -->
+                    <input type="text">
+                    <button class="iconfont">&#xe8d6;</button>
+                </div>
+            </div>
+    
+            <div class="st-tottom">
+                                        <!-- id 被选中 -->
+                <li class="liebiao" onclick="window.location.href='/href/geren.html'">
+                    <span> 
+                        <span class="iconfont">&#xeb53;</span>个人中心
+                    </span>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </li>
+    
+                <li class="liebiao" onclick="window.location.href='/href/yuagong.html'">
+                    <span>
+                        <span class="iconfont">&#xe600;</span>员工管理
+                    </span>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </li>
+    
+                <li class="liebiao" onclick="window.location.href='/href/gongyingshang.html'">
+                    <span>
+                        <span class="iconfont">&#xe88d;</span>供应商管理
+                    </span>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </li>
+    
+                <li class="liebiao" onclick="window.location.href='/href/fenlei.html'">
+                    <span>
+                        <span class="iconfont">&#xe65c;</span>商品分类管理
+                    </span>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </li>
+                <li class="liebiao" onclick="window.location.href='/href/caigo.html'">
+                    <span>
+                        <span class="iconfont">&#xe607;</span> 货物采购管理
+                    </span>
+                    <ul>
+    
+                        <li></li>
+                    </ul>
+                </li>
+    
+                <li class="liebiao" id="baixuanzhong" onclick="window.location.href='/href/xingxi.html'">
+                    <span>
+                        <span class="iconfont">&#xeb51;</span> 商品信息管理
+                    </span>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </li>
+    
+                <li class="liebiao" onclick="window.location.href='/href/ruku.html'">
+                    <span>
+                        <span class="iconfont">&#xeacb;</span> 商品入库管理
+                    </span>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </li>
+    
+                <li class="liebiao" onclick="window.location.href='/href/chuku.html'">
+                    <span>
+                        <span class="iconfont">&#xeaca;</span> 商品出库管理
+                    </span>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </li>
+    
+                <li class="liebiao" onclick="window.location.href='/href/kefu.html'">
+                    <span>
+                        <span class="iconfont">&#xeb53;</span> 在线沟通管理
+                    </span>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </li>
+    
+                <li class="liebiao" onclick="window.location.href='/href/pandian.html'">
+                    <span>
+                        <span class="iconfont">&#xe640;</span> 货物盘点管理
+                    </span>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </li>
+    
+                <li class="liebiao" onclick="window.location.href='/href/gonggao.html'">
+                    <span>
+                        <span class="iconfont">&#xe65b;</span> 公告信息管理
+                    </span>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </li>
+    
+                <li class="liebiao" onclick="window.location.href='/href/gongyingshanghuowu.html'">
+                    <span>
+                        <span class="iconfont">&#xeac8;</span> 供应商货物管理
+                    </span>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </li>
+            </div>
+    </div>
+
+    <!-- 功能部分 -->
+
+    <!-- 分页器 -->
+    <div id="barcon" class="barcon1">
+        <div id="barcon1" class="barcon1"></div>
+        <div id="barcon2" class="barcon2">
+            <ul>
+                <li><a href="###" id="firstPage">首页</a></li>
+                <li><a href="###" id="prePage">上一页</a></li>
+                <li><a href="###" id="nextPage">下一页</a></li>
+                <li><a href="###" id="lastPage">尾页</a></li>
+                <li><select id="jumpWhere"> </select></li>
+                <li><a href="###" id="jumpPage" onclick="jumpPage()">跳转</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 信息管理 -->
+    <div class="function1">
+        <ul class="sp-name">
+            <li class="sp-inpt">
+                <label for="" id="lab">商品名称：</label>
+                <input type="text" id="datepicker" style="padding-left: 8px; font-size: 17px; width: 140px; height: 35px;">
+                <label for="" id="lab">分类：</label>
+                <input type="text" id="datepicker" style="padding-left: 8px; font-size: 17px; width: 120px; height: 35px;">
+                <label for="" id="lab">品牌：</label>
+                <input type="text" id="datepicker" style="padding-left: 8px; font-size: 17px; width: 120px; height: 35px;">
+                <button id="xingxi-btn1">查询</button>
+                <button id="xingxi-btn2">添加</button>
+                <!-- 按钮信息 -->
+                <button id="xingxi-btn3">统计</button>
+                <button id="xingxi-btn4">批量删除</button>
+            </li>
+        </ul>
+
+        
+
+
+        <!-- 商品信息 -->
+        <div class="food">
+            <!-- 表单 -->
+            <ul class="orderbox">
+                <li class="da-biao">
+                    <table class="tab-da">
+                        <tbody>
+                            <tr>
+                                <td><p>1</p></td>
+                                <td><p>商品名称</p></td>
+                                <td><p>分类</p></td>
+                                <td><p class="biao-img" >图片</p></td>
+                                <td><p>数量</p></td>
+                                <td><p>品牌</p></td>
+                                <td><p>规格</p></td>
+                                <td><p>进价</p></td>
+                                <td><p>售价</p></td>
+                                <td class="chaozhuo"><p>操作</p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+            </ul>
+
+            <ul class="orderbox">
+                <li class="xiao-top">
+                    <table class="tab-xiao">
+                        <tbody>
+                            <tr>
+                                <td><p>2</p></td>
+                                <td><p>卡西欧手表</p></td>
+                                <td><p>饰品</p></td>
+                                <td><img src="/img/1664870892163.jpg" alt=""></td>
+                                <td><p>1</p></td>
+                                <td class="pingpai"><p>卡西欧</p></td>
+                                <td><p>55mm</p></td>
+                                <td><p>709￥</p></td>
+                                <td><p>880￥</p></td>
+                                <td><button id="xbtn-ck">查看</button></td>
+                                <td><button id="xbtn-xg">修改</button></td>
+                                <td><button id="xtbn-sc">删除</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+            </ul>
+
+            <ul class="orderbox">
+                <li class="xiao-bottom">
+                    <table class="tab-xiao">
+                        <tbody>
+                            <tr>
+                                <td><p>3</p></td>
+                                <td><p>韩式棒球服</p></td>
+                                <td><p>衣服</p></td>
+                                <td><img src="/img/1664870910857.jpg" alt=""></td>
+                                <td><p>1</p></td>
+                                <td class="pingpai"><p>微森</p></td>
+                                <td><p>S-XXK</p></td>
+                                <td><p>98￥</p></td>
+                                <td><p>168￥</p></td>
+                                <td><button id="xbtn-ck">查看</button></td>
+                                <td><button id="xbtn-xg">修改</button></td>
+                                <td><button id="xtbn-sc">删除</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+            </ul>
+
+            <ul class="orderbox">
+                <li class="xiao-top">
+                    <table class="tab-xiao">
+                        <tbody>
+                            <tr>
+                                <td><p>4</p></td>
+                                <td><p>小米锅巴</p></td>
+                                <td><p>零食</p></td>
+                                <td><img src="/img/1664870928874.jpg" alt=""></td>
+                                <td><p>1</p></td>
+                                <td class="pingpai"><p>琥珀</p></td>
+                                <td><p>500克</p></td>
+                                <td><p>3￥</p></td>
+                                <td><p>5￥</p></td>
+                                <td><button id="xbtn-ck">查看</button></td>
+                                <td><button id="xbtn-xg">修改</button></td>
+                                <td><button id="xtbn-sc">删除</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+            </ul>
+
+            <ul class="orderbox">
+                <li class="xiao-bottom">
+                    <table class="tab-xiao">
+                        <tbody>
+                            <tr>
+                                <td><p>5</p></td>
+                                <td><p>正规医用口罩</p></td>
+                                <td><p>个护</p></td>
+                                <td><img src="/img/1664870960317.jpg" alt=""></td>
+                                <td><p>100</p></td>
+                                <td class="pingpai"><p>卫生院</p></td>
+                                <td><p>100*50</p></td>
+                                <td><p>10￥</p></td>
+                                <td><p>19￥</p></td>
+                                <td><button id="xbtn-ck">查看</button></td>
+                                <td><button id="xbtn-xg">修改</button></td>
+                                <td><button id="xtbn-sc">删除</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+            </ul>
+
+            <ul class="orderbox">
+                <li class="xiao-top">
+                    <table class="tab-xiao">
+                        <tbody>
+                            <tr>
+                                <td><p>6</p></td>
+                                <td><p>进口榴莲</p></td>
+                                <td><p>水果</p></td>
+                                <td><img src="/img/1664871017141.jpg" alt=""></td>
+                                <td><p>1</p></td>
+                                <td class="pingpai"><p>老果农</p></td>
+                                <td><p>6斤</p></td>
+                                <td><p>120￥</p></td>
+                                <td><p>170￥</p></td>
+                                <td><button id="xbtn-ck">查看</button></td>
+                                <td><button id="xbtn-xg">修改</button></td>
+                                <td><button id="xtbn-sc">删除</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+            </ul>
+
+            <ul class="orderbox">
+                <li class="xiao-bottom">
+                    <table class="tab-xiao">
+                        <tbody>
+                            <tr>
+                                <td><p>7</p></td>
+                                <td><p>iPhone14pormax</p></td>
+                                <td><p>手机</p></td>
+                                <td><img src="/img/1664871050820.jpg" alt=""></td>
+                                <td><p>1</p></td>
+                                <td class="pingpai"><p>苹果</p></td>
+                                <td><p>800克</p></td>
+                                <td><p>9600￥</p></td>
+                                <td><p>11200￥</p></td>
+                                <td><button id="xbtn-ck">查看</button></td>
+                                <td><button id="xbtn-xg">修改</button></td>
+                                <td><button id="xtbn-sc">删除</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+            </ul>
+
+            <ul class="orderbox">
+                <li class="xiao-top">
+                    <table class="tab-xiao">
+                        <tbody>
+                            <tr>
+                                <td><p>8</p></td>
+                                <td><p>懒人沙发</p></td>
+                                <td><p>家具</p></td>
+                                <td><img src="/img/微信图片_20221006151148.jpg" alt=""></td>
+                                <td><p>1</p></td>
+                                <td class="pingpai"><p>有家</p></td>
+                                <td><p>20千克</p></td>
+                                <td><p>286￥</p></td>
+                                <td><p>349￥</p></td>
+                                <td><button id="xbtn-ck">查看</button></td>
+                                <td><button id="xbtn-xg">修改</button></td>
+                                <td><button id="xtbn-sc">删除</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+            </ul>
+
+            <ul class="orderbox">
+                <li class="xiao-bottom">
+                    <table class="tab-xiao">
+                        <tbody>
+                            <tr>
+                                <td><p>9</p></td>
+                                <td><p>驭帅15球鞋</p></td>
+                                <td><p>鞋子</p></td>
+                                <td><img src="/img/微信图片_20221006151200.jpg" alt=""></td>
+                                <td><p>1</p></td>
+                                <td class="pingpai"><p>李宁</p></td>
+                                <td><p>820克</p></td>
+                                <td><p>460￥</p></td>
+                                <td><p>560￥</p></td>
+                                <td><button id="xbtn-ck">查看</button></td>
+                                <td><button id="xbtn-xg">修改</button></td>
+                                <td><button id="xtbn-sc">删除</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+            </ul>
+
+            <ul class="orderbox">
+                <li class="xiao-top">
+                    <table class="tab-xiao">
+                        <tbody>
+                            <tr>
+                                <td><p>10</p></td>
+                                <td><p>熏风K520</p></td>
+                                <td><p>羽毛球拍</p></td>
+                                <td><img src="/img/微信图片_20221006151206.jpg" alt=""></td>
+                                <td><p>1</p></td>
+                                <td class="pingpai"><p>熏风</p></td>
+                                <td><p>82克</p></td>
+                                <td><p>150￥</p></td>
+                                <td><p>168￥</p></td>
+                                <td><button id="xbtn-ck">查看</button></td>
+                                <td><button id="xbtn-xg">修改</button></td>
+                                <td><button id="xtbn-sc">删除</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+            </ul>
+        </div>
+    </div>
+<script>
+    // 获取弹窗
+    var modal = document.getElementById('mymodal');
+ 
+ // 打开弹窗的按钮对象
+    var btn = document.getElementById("xingxi-btn2");
+  
+ // 获取 <span> 元素，用于关闭弹窗
+    var span = document.querySelector('.close');
+  
+ // 点击按钮打开弹窗
+    btn.onclick = function() {
+     modal.style.display = "block";
+    }
+  
+ // 点击 <span> (x), 关闭弹窗
+    span.onclick = function() {
+     modal.style.display = "none";
+    }
+  
+ // 在用户点击其他地方时，关闭弹窗
+    window.onclick = function(event) {
+        if (event.target == modal) {
+         modal.style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>
