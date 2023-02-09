@@ -10,24 +10,24 @@
     <link rel="stylesheet" href="/css/">
     <script src="/js/jquery.min.js"></script>
 
-    
+
     <style>
-       /* CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
-@font-face {
-  font-family: "iconfont"; /* Project id 3429987 */
-  src: url('//at.alicdn.com/t/c/font_3429987_3ofot782tgx.woff2?t=1674897481944') format('woff2'),
-       url('//at.alicdn.com/t/c/font_3429987_3ofot782tgx.woff?t=1674897481944') format('woff'),
-       url('//at.alicdn.com/t/c/font_3429987_3ofot782tgx.ttf?t=1674897481944') format('truetype');
-}
+        /* CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+        @font-face {
+            font-family: "iconfont";
+            /* Project id 3429987 */
+            src: url('//at.alicdn.com/t/c/font_3429987_3ofot782tgx.woff2?t=1674897481944') format('woff2'),
+                url('//at.alicdn.com/t/c/font_3429987_3ofot782tgx.woff?t=1674897481944') format('woff'),
+                url('//at.alicdn.com/t/c/font_3429987_3ofot782tgx.ttf?t=1674897481944') format('truetype');
+        }
 
-.iconfont {
-  font-family: "iconfont" !important;
-  font-size: 16px;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
+        .iconfont {
+            font-family: "iconfont" !important;
+            font-size: 16px;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
     </style>
     <title>登入</title>
 </head>
@@ -67,8 +67,8 @@
         var mimabtn = document.getElementById("mimabtn")
         var mimaimg = document.getElementById("mimaimg")
         var flag = 0
-        mimabtn.onclick = function(){
-            if (flag == 0){
+        mimabtn.onclick = function () {
+            if (flag == 0) {
                 password.type = "text"
                 mimaimg.src = "/gongyong-img/zhengyan.jpg"
                 flag = 1
@@ -78,18 +78,19 @@
                 flag = 0
             }
         }
-        
+
         // jQuery
         $(function () {
             $(".loginbtn").on("click", function () {
                 if ($("#username").val() == "123" || $("#password").val() == "123") {
                     window.location.href = "zuowei.html"
+                    alert("欢迎登录！")
                 } else {
                     alert("请输入正确账号密码")
                 }
 
             })
-            
+
         })
     </script>
 </body>
