@@ -113,3 +113,103 @@
     color: tomato;
     margin: 10px 0;
 }
+
+
+
+
+:root {
+    --color: #B9DEFF;
+    --sunColor: #FFCA22;
+    --downColor: rgba(18, 117, 204, 1);
+    --downColor2: rgba(18, 117, 204, 0.2);
+    --start: #81C5F8;
+    --end: #1181DF;
+  }
+          .box {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    position: relative;
+    left: 30.5rem;
+  }
+  .cloud {
+    width: 60px;
+    height: 60px;
+    background-color: var(--color);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -30px;
+    margin-left: -30px;
+    color: var(--color);
+    box-shadow: 0 0 0 6px,
+      -35px 11px 0px -5px,
+      33px 15px 0px -9px;
+    z-index: 1;
+  }
+  .cloud::after {
+    content: '';
+    position: absolute;
+    width: 110%;
+    height: 6px;
+    background: var(--color);
+    bottom: -6px;
+    left: -6px;
+  }
+  .sunShower .sun {
+    margin: -32px 16px;
+  }
+  .sun {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: var(--sunColor);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    margin-top: -20px;
+    margin-left: -20px;
+    color: var(--sunColor);
+    box-shadow: 0 0 0 6px;
+    animation: spin 12s infinite linear;
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .rays {
+    position: absolute;
+    width: 6px;
+    height: 18px;
+    background-color: var(--sunColor);
+    top: -32px;
+    left: 50%;
+    margin-left: -3px;
+    border-radius: 4px;
+    box-shadow: 0px 86px;
+  }
+  .rays::before,
+  .rays::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 18px;
+    background-color: var(--sunColor);
+    transform: rotate(60deg);
+    transform-origin: 3px 52px;
+    box-shadow: 0px 86px;
+    border-radius: 4px;
+  }
+  .rays::after {
+    transform: rotate(120deg);
+  }
