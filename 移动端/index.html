@@ -375,6 +375,25 @@
     <!-- 音乐播放器、 -->
     <script src="https://myhkw.cn/api/player/demo" id="myhk" key="demo" skin="player" lr="-l" m="1"></script>
     <script src="https://myhkw.cn/player/js/jquery.min.js" type="text/javascript"></script>
+    <!-- // 响应式页面 -->
+    <script>
+        function isMobile() {
+            const userAgent = navigator.userAgent;
+            const mobilePatterns = [
+                /Android(\d+\.\d+)?; Mobile|iPhone|iPad|iPod|BlackBerry|Windows Phone|Opera Mini|IEMobile/
+            ];
+            return mobilePatterns.some(pattern => pattern.test(userAgent));
+        }
+
+        function accessURL() {
+            if (isMobile()) {
+                window.location.href = 'https://dycs.pages.dev';
+            } else {
+                window.location.href = 'https://dyc.pages.dev';
+            }
+        }
+        document.addEventListener('DOMContentLoaded', accessURL);
+    </script>
 </body>
 
 </html>
